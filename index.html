@@ -1,85 +1,867 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pierre Cavalcante — Ciência da Computação | Portfólio</title>
+
+    <meta name="description"
+        content="Portfólio pessoal de Pierre Cavalcante, estudante de Ciência da Computação interessado em desenvolvimento de software e backend.">
+
+    <meta name="theme-color" content="#09090D">
+
+    <title>Pierre Cavalcante | Portfólio</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
 
-    <!-- 4.1 Header -->
-    <header id="header">
-        <div class="container header-container">
-            <a href="#hero" class="logo">PC</a>
-            
-            <nav class="nav-menu">
-                <a href="#hero" data-i18n="nav-home">Início</a>
-                <a href="#about" data-i18n="nav-about">Sobre</a>
-                <a href="#skills" data-i18n="nav-skills">Habilidades</a>
-                <a href="#projects" data-i18n="nav-projects">Projetos</a>
-                <a href="#contact" data-i18n="nav-contact">Contato</a>
-            </nav>
+    <!-- Link para pular diretamente ao conteúdo -->
+    <a href="#conteudo" class="skip-link" data-i18n="accessibility.skip">
+        Pular para o conteúdo
+    </a>
 
-            <div class="header-controls">
-                <!-- Seletor de Idioma -->
-                <button id="lang-toggle" class="btn-control" aria-label="Alternar idioma">EN</button>
-                <!-- Alternância de Tema -->
-                <button id="theme-toggle" class="btn-control" aria-label="Alternar tema">🌙</button>
-            </div>
+
+    <!-- =================================
+         HEADER - NAVEGAÇÃO
+    ================================== -->
+
+    <header class="site-header">
+
+        <!-- Logo -->
+        <a href="#inicio" class="logo" aria-label="Pierre Cavalcante - Início">
+            PC<span>.</span>
+        </a>
+
+        <!-- Botão do menu mobile -->
+        <button
+            type="button"
+            class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+        <!-- Navegação -->
+        <nav
+            class="main-nav"
+            id="primary-navigation"
+            aria-label="Navegação principal">
+
+            <ul>
+                <li>
+                    <a href="#inicio" data-i18n="nav.home">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#sobre" data-i18n="nav.about">
+                        Sobre
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#habilidades" data-i18n="nav.skills">
+                        Habilidades
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projetos" data-i18n="nav.projects">
+                        Projetos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contato" data-i18n="nav.contact">
+                        Contato
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Controles de idioma e tema -->
+        <div class="header-controls">
+
+            <button
+                type="button"
+                class="language-toggle"
+                aria-label="Alterar idioma"
+                data-i18n-aria-label="controls.language">
+
+                PT / EN
+
+            </button>
+
+            <button
+                type="button"
+                class="theme-toggle"
+                aria-label="Alternar tema"
+                data-i18n-aria-label="controls.theme">
+
+                Tema
+
+            </button>
+
         </div>
+
     </header>
 
-    <main>
-        <!-- 4.2 Hero -->
-        <section id="hero" class="section">
-            <div class="container">
-                <h1>Pierre Cavalcante</h1>
-                <p class="subtitle">Estudante de Ciência da Computação & Desenvolvedor Backend</p>
-                <!-- Demais conteúdos da Hero virão aqui -->
+
+    <!-- =================================
+         MAIN - CONTEÚDO PRINCIPAL
+    ================================== -->
+
+    <main id="conteudo">
+
+
+        <!-- =================================
+             HERO - APRESENTAÇÃO INICIAL
+        ================================== -->
+
+        <section
+            class="hero"
+            id="inicio"
+            aria-labelledby="hero-title">
+
+            <div class="hero-content">
+
+                <p class="hero-eyebrow" data-i18n="hero.eyebrow">
+                    Estudante de Ciência da Computação
+                </p>
+
+                <h1 id="hero-title">
+
+                    <span data-i18n="hero.greeting">
+                        Olá, sou
+                    </span>
+
+                    <span class="highlight-name">
+                        Pierre Cavalcante.
+                    </span>
+
+                </h1>
+
+                <h2 class="hero-subtitle" data-i18n="hero.subtitle">
+                    Construindo minha jornada na tecnologia.
+                </h2>
+
+                <p class="hero-description" data-i18n="hero.description">
+
+                    Estudante de Ciência da Computação interessado
+                    em desenvolvimento de software, backend e
+                    resolução de problemas. Sempre buscando aprender
+                    e desenvolver novos projetos.
+
+                </p>
+
+
+                <!-- Botões principais -->
+                <div class="hero-actions">
+
+                    <a
+                        href="#projetos"
+                        class="button button-primary"
+                        data-i18n="hero.projects_button">
+
+                        Visualizar projetos
+
+                    </a>
+
+                    <a
+                        href="#contato"
+                        class="button button-secondary"
+                        data-i18n="hero.contact_button">
+
+                        Entre em contato
+
+                    </a>
+
+                </div>
+
+
+                <!-- Links para redes profissionais -->
+                <div class="hero-socials">
+
+                    <a
+                        href="https://github.com/Pirraskvcnt"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        GitHub ↗
+
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/pierre-cavalcante-kvcnt/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        LinkedIn ↗
+
+                    </a>
+
+                </div>
+
             </div>
+
+
+            <!-- Resumo profissional -->
+            <div class="hero-highlights">
+
+                <div class="highlight-item">
+
+                    <h3>Java</h3>
+
+                    <p data-i18n="hero.highlight_java">
+                        Foco atual de estudos
+                    </p>
+
+                </div>
+
+                <div class="highlight-item">
+
+                    <h3>Backend</h3>
+
+                    <p data-i18n="hero.highlight_backend">
+                        Área de interesse
+                    </p>
+
+                </div>
+
+                <div class="highlight-item">
+
+                    <h3>CC</h3>
+
+                    <p data-i18n="hero.highlight_degree">
+                        Ciência da Computação
+                    </p>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- 4.3 About -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2 data-i18n="about-title">Sobre mim</h2>
+
+        <!-- =================================
+             ABOUT - SOBRE MIM
+        ================================== -->
+
+        <section
+            class="about section"
+            id="sobre"
+            aria-labelledby="about-title">
+
+            <div class="section-heading">
+
+                <p class="section-eyebrow" data-i18n="about.eyebrow">
+                    01 / SOBRE MIM
+                </p>
+
+                <h2 id="about-title" data-i18n="about.title">
+                    Conheça um pouco da minha trajetória.
+                </h2>
+
             </div>
+
+
+            <div class="about-content">
+
+                <div class="about-description">
+
+                    <p data-i18n="about.paragraph1">
+
+                        Sou estudante de Ciência da Computação
+                        na UDF e tenho interesse pelo universo
+                        da tecnologia e do desenvolvimento
+                        de software.
+
+                    </p>
+
+                    <p data-i18n="about.paragraph2">
+
+                        Atualmente, estou construindo minha base
+                        em programação e aprofundando meus
+                        conhecimentos em desenvolvimento backend,
+                        com foco em Java, lógica de programação
+                        e bancos de dados.
+
+                    </p>
+
+                    <p data-i18n="about.paragraph3">
+
+                        Acredito que compreender como as coisas
+                        funcionam é tão importante quanto saber
+                        utilizá-las. Por isso, busco aprender
+                        através dos estudos, da prática e do
+                        desenvolvimento de projetos.
+
+                    </p>
+
+                </div>
+
+
+                <!-- Informações pessoais e acadêmicas -->
+                <div class="about-information">
+
+                    <div class="information-item">
+
+                        <h3 data-i18n="about.education_label">
+                            Formação
+                        </h3>
+
+                        <p data-i18n="about.education">
+                            Ciência da Computação
+                        </p>
+
+                    </div>
+
+                    <div class="information-item">
+
+                        <h3 data-i18n="about.institution_label">
+                            Instituição
+                        </h3>
+
+                        <p>UDF</p>
+
+                    </div>
+
+                    <div class="information-item">
+
+                        <h3 data-i18n="about.focus_label">
+                            Foco de estudos
+                        </h3>
+
+                        <p data-i18n="about.focus">
+                            Desenvolvimento Backend e Java
+                        </p>
+
+                    </div>
+
+                    <div class="information-item">
+
+                        <h3 data-i18n="about.interests_label">
+                            Interesses
+                        </h3>
+
+                        <p data-i18n="about.interests">
+                            Desenvolvimento de software, tecnologia,
+                            programação e resolução de problemas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
 
-        <!-- 4.4 Skills -->
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 data-i18n="skills-title">Habilidades</h2>
+
+        <!-- =================================
+             SKILLS - HABILIDADES
+        ================================== -->
+
+        <section
+            class="skills section"
+            id="habilidades"
+            aria-labelledby="skills-title">
+
+            <div class="section-heading">
+
+                <p class="section-eyebrow" data-i18n="skills.eyebrow">
+                    02 / HABILIDADES
+                </p>
+
+                <h2 id="skills-title" data-i18n="skills.title">
+                    Tecnologias e conhecimentos.
+                </h2>
+
+                <p data-i18n="skills.description">
+
+                    Tecnologias que venho estudando e utilizando
+                    para desenvolver minha base na computação.
+
+                </p>
+
             </div>
+
+
+            <div class="skills-grid">
+
+
+                <!-- Linguagens de programação -->
+                <article class="skill-card">
+
+                    <h3 data-i18n="skills.programming">
+                        Linguagens de programação
+                    </h3>
+
+                    <ul class="skill-list">
+
+                        <li class="skill-item">
+
+                            <span class="skill-name">Java</span>
+
+                            <span
+                                class="skill-level"
+                                data-i18n="status.learning">
+
+                                Em aprendizado
+
+                            </span>
+
+                        </li>
+
+                        <li class="skill-item">
+
+                            <span class="skill-name">Python</span>
+
+                            <span
+                                class="skill-level"
+                                data-i18n="status.basic">
+
+                                Conhecimentos básicos
+
+                            </span>
+
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- Desenvolvimento web -->
+                <article class="skill-card">
+
+                    <h3 data-i18n="skills.web">
+                        Desenvolvimento web
+                    </h3>
+
+                    <ul class="skill-list">
+
+                        <li class="skill-item">
+
+                            <span class="skill-name">HTML5</span>
+
+                            <span
+                                class="skill-level"
+                                data-i18n="status.practice">
+
+                                Em prática
+
+                            </span>
+
+                        </li>
+
+                        <li class="skill-item">
+
+                            <span class="skill-name">CSS3</span>
+
+                            <span
+                                class="skill-level"
+                                data-i18n="status.practice">
+
+                                Em prática
+
+                            </span>
+
+                        </li>
+
+                        <li class="skill-item">
+
+                            <span class="skill-name">JavaScript</span>
+
+                            <span
+                                class="skill-level"
+                                data-i18n="status.learning">
+
+                                Em aprendizado
+
+                            </span>
+
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- Banco de dados -->
+                <article class="skill-card">
+
+                    <h3 data-i18n="skills.database">
+                        Banco de dados
+                    </h3>
+
+                    <ul class="skill-list">
+
+                        <li class="skill-item">
+
+                            <span class="skill-name">MySQL</span>
+
+                            <span
+                                class="skill-level"
+                                data-i18n="status.learning">
+
+                                Em aprendizado
+
+                            </span>
+
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <!-- Ferramentas -->
+                <article class="skill-card">
+
+                    <h3 data-i18n="skills.tools">
+                        Ferramentas
+                    </h3>
+
+                    <ul class="skill-list">
+
+                        <li class="skill-item">
+
+                            <span class="skill-name">Git</span>
+
+                            <span
+                                class="skill-level"
+                                data-i18n="status.practice">
+
+                                Em prática
+
+                            </span>
+
+                        </li>
+
+                        <li class="skill-item">
+
+                            <span class="skill-name">GitHub</span>
+
+                            <span
+                                class="skill-level"
+                                data-i18n="status.practice">
+
+                                Em prática
+
+                            </span>
+
+                        </li>
+
+                        <li class="skill-item">
+
+                            <span class="skill-name">VS Code</span>
+
+                            <span
+                                class="skill-level"
+                                data-i18n="status.practice">
+
+                                Em prática
+
+                            </span>
+
+                        </li>
+
+                    </ul>
+
+                </article>
+
+            </div>
+
         </section>
 
-        <!-- 4.5 Projects -->
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 data-i18n="projects-title">Projetos</h2>
+
+        <!-- =================================
+             PROJECTS - PROJETOS
+        ================================== -->
+
+        <section
+            class="projects section"
+            id="projetos"
+            aria-labelledby="projects-title">
+
+            <div class="section-heading">
+
+                <p class="section-eyebrow" data-i18n="projects.eyebrow">
+                    03 / PROJETOS
+                </p>
+
+                <h2 id="projects-title" data-i18n="projects.title">
+                    Projetos e experiências práticas.
+                </h2>
+
+                <p data-i18n="projects.description">
+
+                    Alguns dos projetos que desenvolvi durante
+                    minha trajetória de aprendizado.
+
+                </p>
+
             </div>
+
+
+            <div class="projects-grid">
+
+
+                <!-- Projeto LionPaw -->
+                <article class="project-card">
+
+                    <div class="project-visual" aria-hidden="true">
+
+                        <span class="project-visual-label">
+                            LIONPAW
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <p
+                            class="project-category"
+                            data-i18n="projects.academic">
+
+                            Projeto acadêmico
+
+                        </p>
+
+                        <h3>LionPaw</h3>
+
+                        <p data-i18n="projects.lionpaw_description">
+
+                            Projeto de um pet shop fictício,
+                            desenvolvido durante a faculdade
+                            para praticar a estruturação e
+                            estilização de páginas web.
+
+                        </p>
+
+
+                        <ul class="project-technologies">
+
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+
+                        </ul>
+
+
+                        <a
+                            href="https://github.com/Pirraskvcnt/LionPaw"
+                            class="project-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="projects.repository">
+
+                            Ver repositório ↗
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Projeto Portfolio -->
+                <article class="project-card">
+
+                    <div class="project-visual" aria-hidden="true">
+
+                        <span class="project-visual-label">
+                            PERSONAL PORTFOLIO
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <p
+                            class="project-category"
+                            data-i18n="projects.personal">
+
+                            Projeto pessoal
+                            
+                        </p>
+
+                        <h3>Personal Portfolio</h3>
+
+                        <p data-i18n="projects.portfolio_description">
+
+                            Desenvolvimento do meu portfólio
+                            pessoal, com o objetivo de apresentar
+                            meus conhecimentos, projetos e
+                            trajetória na tecnologia.
+
+                        </p>
+
+
+                        <ul class="project-technologies">
+
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+
+                        </ul>
+
+
+                        <span
+                            class="project-status"
+                            data-i18n="status.developing">
+
+                            Em desenvolvimento
+
+                        </span>
+
+
+                        <a
+                            href="https://github.com/Pirraskvcnt/portfolio"
+                            class="project-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="projects.repository">
+
+                            Ver repositório ↗
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="projects-more">
+
+                <a
+                    href="https://github.com/Pirraskvcnt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button button-secondary"
+                    data-i18n="projects.all">
+
+                    Ver todos os projetos no GitHub ↗
+
+                </a>
+
+            </div>
+
         </section>
 
-        <!-- 4.6 Contact -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2 data-i18n="contact-title">Contato</h2>
+
+        <!-- =================================
+             CONTACT - CONTATO
+        ================================== -->
+
+        <section
+            class="contact section"
+            id="contato"
+            aria-labelledby="contact-title">
+
+            <div class="contact-content">
+
+                <p class="section-eyebrow" data-i18n="contact.eyebrow">
+                    04 / CONTATO
+                </p>
+
+                <h2 id="contact-title" data-i18n="contact.title">
+                    Vamos conversar?
+                </h2>
+
+                <p data-i18n="contact.description">
+
+                    Estou aberto a conexões, trocas de conhecimento
+                    e oportunidades relacionadas à tecnologia.
+                    Entre em contato através das minhas redes.
+
+                </p>
+
+
+                <!-- Canais de contato -->
+                <div class="contact-links">
+
+                    <a
+                        href="https://github.com/Pirraskvcnt"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        GitHub ↗
+
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/pierre-cavalcante-kvcnt/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        LinkedIn ↗
+
+                    </a>
+
+                </div>
+
             </div>
+
         </section>
+
+
     </main>
 
-    <!-- 4.7 Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="current-year"></span> Pierre Cavalcante. Todos os direitos reservados.</p>
+
+    <!-- =================================
+         FOOTER - RODAPÉ
+    ================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <a href="#inicio" class="logo">
+                PC<span>.</span>
+            </a>
+
+            <p data-i18n="footer.description">
+
+                Desenvolvido por Pierre Cavalcante.
+
+            </p>
+
+            <p class="footer-copyright">
+
+                © <span id="current-year">2026</span>
+                Pierre Cavalcante.
+
+                <span data-i18n="footer.rights">
+                    Todos os direitos reservados.
+                </span>
+
+            </p>
+
         </div>
+
     </footer>
 
-    <script src="js/script.js"></script>
 </body>
+
 </html>
