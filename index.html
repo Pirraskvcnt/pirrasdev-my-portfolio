@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre Cavalcante — Ciência da Computação | Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 4.1 Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#hero" class="logo">PC</a>
+            
+            <nav class="nav-menu">
+                <a href="#hero" data-i18n="nav-home">Início</a>
+                <a href="#about" data-i18n="nav-about">Sobre</a>
+                <a href="#skills" data-i18n="nav-skills">Habilidades</a>
+                <a href="#projects" data-i18n="nav-projects">Projetos</a>
+                <a href="#contact" data-i18n="nav-contact">Contato</a>
+            </nav>
+
+            <div class="header-controls">
+                <!-- Seletor de Idioma -->
+                <button id="lang-toggle" class="btn-control" aria-label="Alternar idioma">EN</button>
+                <!-- Alternância de Tema -->
+                <button id="theme-toggle" class="btn-control" aria-label="Alternar tema">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 4.2 Hero -->
+        <section id="hero" class="section">
+            <div class="container">
+                <h1>Pierre Cavalcante</h1>
+                <p class="subtitle">Estudante de Ciência da Computação & Desenvolvedor Backend</p>
+                <!-- Demais conteúdos da Hero virão aqui -->
+            </div>
+        </section>
+
+        <!-- 4.3 About -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 data-i18n="about-title">Sobre mim</h2>
+            </div>
+        </section>
+
+        <!-- 4.4 Skills -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 data-i18n="skills-title">Habilidades</h2>
+            </div>
+        </section>
+
+        <!-- 4.5 Projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 data-i18n="projects-title">Projetos</h2>
+            </div>
+        </section>
+
+        <!-- 4.6 Contact -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 data-i18n="contact-title">Contato</h2>
+            </div>
+        </section>
+    </main>
+
+    <!-- 4.7 Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Pierre Cavalcante. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
