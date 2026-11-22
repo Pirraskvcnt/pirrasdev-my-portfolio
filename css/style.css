@@ -311,43 +311,6 @@ a:focus-visible {
     border-radius: 999px;
 }
 
-.language-option {
-    width: 34px;
-    height: 30px;
-
-    display: grid;
-    place-items: center;
-
-    padding: 0;
-
-    background: transparent;
-
-    border: 1px solid transparent;
-    border-radius: 999px;
-
-    font-size: 1.1rem;
-    line-height: 1;
-
-    opacity: 0.55;
-
-    cursor: pointer;
-
-    transition: all var(--transition);
-}
-
-.language-option:hover {
-    opacity: 1;
-    transform: translateY(-1px);
-}
-
-.language-option.is-active {
-    opacity: 1;
-
-    background-color: var(--bg-card);
-
-    border-color: var(--border-color);
-}
-
 
 /* Interruptor de tema */
 
@@ -2283,46 +2246,6 @@ body,
     gap: 12px;
 }
 
-.language-control {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.language-select {
-    appearance: none;
-    -webkit-appearance: none;
-
-    min-width: 125px;
-    height: 38px;
-
-    padding: 0 32px 0 12px;
-
-    color: var(--text-primary);
-    background: var(--glass-bg);
-
-    border: 1px solid var(--glass-border);
-    border-radius: 9px;
-
-    font-family: var(--font-primary);
-    font-size: 0.78rem;
-    font-weight: 600;
-
-    cursor: pointer;
-    transition: all var(--transition);
-}
-
-.language-select:hover,
-.language-select:focus {
-    border-color: var(--color-primary);
-    outline: none;
-}
-
-.language-select option {
-    color: var(--text-primary);
-    background: var(--bg-secondary);
-}
-
 .language-chevron {
     position: absolute;
     right: 12px;
@@ -2544,3 +2467,214 @@ html[data-theme="light"] .sun-icon {
         line-height: 1.9;
     }
 }
+
+
+/* =========================================
+   LANGUAGE SELECTOR - PIRRASDEV
+========================================= */
+
+.language-menu {
+    position: relative;
+    z-index: 1200;
+}
+
+/* Botão fechado */
+
+.language-trigger {
+    min-width: 82px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 0 12px;
+
+    color: var(--text-primary);
+    background: var(--glass-bg);
+
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+
+    font-family: var(--font-primary);
+    cursor: pointer;
+
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.language-trigger:hover,
+.language-menu.is-open .language-trigger {
+    background: var(--glass-strong);
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 18px var(--ambient-color);
+}
+
+.language-flag {
+    font-size: 1.15rem;
+    line-height: 1;
+}
+
+.language-code {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.language-chevron {
+    width: 13px;
+    height: 13px;
+    color: var(--text-muted);
+
+    transition: transform 0.25s ease;
+}
+
+.language-menu.is-open .language-chevron {
+    transform: rotate(180deg);
+}
+
+/* Menu flutuante */
+
+.language-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+
+    width: 215px;
+    padding: 9px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: 13px;
+
+    box-shadow: var(--glass-shadow);
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    animation: language-dropdown-in 0.18s ease;
+}
+
+.language-dropdown[hidden] {
+    display: none;
+}
+
+/* Título do menu */
+
+.language-dropdown-label {
+    padding: 7px 9px 5px;
+
+    color: var(--text-muted);
+    font-size: 0.63rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* Opções */
+
+.language-option {
+    width: 100%;
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    padding: 8px 10px;
+
+    color: var(--text-secondary);
+    background: transparent;
+
+    border: 1px solid transparent;
+    border-radius: 9px;
+
+    text-align: left;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.language-option:hover {
+    color: var(--text-primary);
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+}
+
+.language-option.is-selected {
+    color: var(--color-primary);
+    background: var(--glass-strong);
+    border-color: var(--glass-border);
+}
+
+.language-option-flag {
+    font-size: 1.3rem;
+}
+
+/* Nome e região */
+
+.language-option-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.language-option-info strong {
+    font-size: 0.79rem;
+    font-weight: 600;
+}
+
+.language-option-info small {
+    color: var(--text-muted);
+    font-size: 0.68rem;
+}
+
+/* Check da opção selecionada */
+
+.language-check {
+    width: 17px;
+    height: 17px;
+
+    margin-left: auto;
+
+    color: var(--color-primary);
+    opacity: 0;
+}
+
+.language-option.is-selected .language-check {
+    opacity: 1;
+}
+
+/* Animação */
+
+@keyframes language-dropdown-in {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    .language-trigger {
+        min-width: 76px;
+        height: 38px;
+    }
+
+    .language-dropdown {
+        width: 205px;
+    }
+}
+
