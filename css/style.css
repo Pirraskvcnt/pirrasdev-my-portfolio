@@ -442,260 +442,10 @@ html[data-theme="light"] .theme-toggle-track {
 }
 
 
-/* =========================================
-   6. HERO - APRESENTAÇÃO INICIAL
-========================================= */
+/* =========================
+   HERO SECTION
+========================= */
 
-.hero {
-
-    width: min(
-        calc(100% - 48px),
-        var(--container-width)
-    );
-
-    min-height: calc(100svh - var(--header-height));
-
-    margin-inline: auto;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding-top: 100px;
-    padding-bottom: 50px;
-
-}
-
-
-.hero-content {
-    max-width: 820px;
-}
-
-
-/* Identificação */
-
-.hero-eyebrow {
-
-    margin-bottom: 22px;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    color: var(--color-green);
-
-    font-size: 0.78rem;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-}
-
-.hero-eyebrow::before {
-
-    content: "";
-
-    width: 7px;
-    height: 7px;
-
-    background-color: var(--color-green);
-
-    border-radius: 50%;
-
-}
-
-
-/* Título principal */
-
-.hero h1 {
-
-    margin-bottom: 14px;
-
-    font-size: clamp(2.7rem, 6vw, 5rem);
-
-    line-height: 1.12;
-    letter-spacing: -3px;
-
-    font-weight: 800;
-
-}
-
-.highlight-name {
-    color: var(--color-primary);
-}
-
-
-/* Subtítulo */
-
-.hero-subtitle {
-
-    margin-bottom: 22px;
-
-    color: var(--text-secondary);
-
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-
-    font-weight: 500;
-    line-height: 1.4;
-
-}
-
-
-/* Descrição */
-
-.hero-description {
-
-    max-width: 650px;
-
-    margin-bottom: 32px;
-
-    color: var(--text-secondary);
-
-    font-size: 1.05rem;
-
-    line-height: 1.8;
-
-}
-
-
-/* Botões */
-
-.hero-actions {
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-
-    margin-bottom: 32px;
-
-}
-
-.button {
-
-    min-height: 48px;
-
-    padding: 12px 22px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid transparent;
-    border-radius: 8px;
-
-    font-size: 0.88rem;
-    font-weight: 600;
-
-    transition: all var(--transition);
-
-}
-
-
-/* Botão principal */
-
-.button-primary {
-
-    background-color: var(--color-primary);
-    color: #171020;
-
-}
-
-.button-primary:hover {
-
-    background-color: var(--color-primary-hover);
-
-    transform: translateY(-3px);
-
-}
-
-
-/* Botão secundário */
-
-.button-secondary {
-
-    background-color: transparent;
-
-    border-color: var(--border-color);
-
-    color: var(--text-primary);
-
-}
-
-.button-secondary:hover {
-
-    border-color: var(--color-primary);
-    color: var(--color-primary);
-
-    transform: translateY(-3px);
-
-}
-
-
-/* Redes sociais */
-
-.hero-socials {
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-
-}
-
-.hero-socials a {
-
-    color: var(--text-secondary);
-
-    font-size: 0.85rem;
-    font-weight: 500;
-
-    transition: color var(--transition);
-
-}
-
-.hero-socials a:hover {
-    color: var(--color-primary);
-}
-
-
-/* Destaques abaixo do Hero */
-
-.hero-highlights {
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    max-width: 700px;
-
-    margin-top: 75px;
-    padding-top: 28px;
-
-    border-top: 1px solid var(--border-color);
-
-}
-
-.highlight-item {
-    padding-right: 20px;
-}
-
-.highlight-item h3 {
-
-    margin-bottom: 5px;
-
-    color: var(--color-primary);
-
-    font-size: 1.5rem;
-    font-weight: 700;
-
-}
-
-.highlight-item p {
-
-    color: var(--text-secondary);
-
-    font-size: 0.8rem;
-
-}
 
 
 /* =========================================
@@ -1760,4 +1510,357 @@ body,
         border-color var(--transition),
         color var(--transition),
         box-shadow var(--transition);
+}
+
+
+
+/* =========================================
+   HERO - VERSÃO ATUAL
+========================================= */
+
+/* Estrutura principal */
+
+.hero {
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+    padding: 75px 8%;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 55px;
+}
+
+/* =========================================
+   APRESENTAÇÃO
+========================================= */
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Identificação */
+
+.hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: var(--color-primary);
+    box-shadow: 0 0 12px var(--ambient-color);
+}
+
+/* Título */
+
+.hero-content h1 {
+    margin-bottom: 25px;
+
+    color: var(--text-primary);
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.8px;
+}
+
+.hero-name {
+    color: var(--color-primary);
+}
+
+/* Descrição */
+
+.hero-description {
+    max-width: 620px;
+    margin-bottom: 28px;
+
+    color: var(--text-secondary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.96rem;
+    line-height: 1.85;
+}
+
+/* =========================================
+   REDES SOCIAIS E CURRÍCULO
+========================================= */
+
+.hero-socials {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 5px;
+}
+
+.hero-socials a {
+    width: 42px;
+    height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-secondary);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+
+    transition: all 0.25s ease;
+}
+
+/* Ícones */
+
+.hero-socials svg {
+    width: 19px;
+    height: 19px;
+}
+
+/* Efeito dos ícones */
+
+.hero-socials a:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background: var(--glass-strong);
+    transform: translateY(-3px);
+}
+
+/* Botão de currículo */
+
+.hero-socials .hero-cv-button {
+    width: auto;
+    min-height: 42px;
+    padding: 0 16px;
+    gap: 9px;
+
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.hero-socials .hero-cv-button:hover {
+    color: var(--color-primary);
+}
+
+/* =========================================
+   INDICADORES
+========================================= */
+
+.hero-stats {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+
+    margin-top: 38px;
+    padding-top: 25px;
+
+    border-top: 1px solid var(--border-color);
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-value {
+    color: var(--color-primary);
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+/* Indicador de projetos */
+
+.stat-project-heading {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.stat-project-link {
+    color: var(--color-primary);
+    font-size: 1.05rem;
+    transition: transform 0.2s ease;
+}
+
+.stat-project-link:hover {
+    transform: translate(3px, -3px);
+}
+
+/* =========================================
+   FOTO CIRCULAR
+========================================= */
+
+.hero-visual {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-photo-wrapper {
+    position: relative;
+
+    width: min(75%, 340px);
+    aspect-ratio: 1 / 1;
+    height: auto;
+
+    overflow: hidden;
+    border-radius: 50%;
+
+    border: 2px solid var(--glass-border);
+
+    box-shadow:
+        0 0 0 10px var(--glass-bg),
+        0 0 45px var(--ambient-color);
+}
+
+.hero-photo {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 25%;
+
+    border-radius: 50%;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+/* Tablets e notebooks menores */
+
+@media (max-width: 950px) {
+    .hero {
+        padding-inline: 6%;
+    }
+
+    .hero-container {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 30px;
+    }
+
+    .hero-visual {
+        min-height: 420px;
+    }
+
+    .hero-photo-wrapper {
+        width: min(82%, 300px);
+    }
+}
+
+/* Celulares e tablets menores */
+
+@media (max-width: 768px) {
+    .hero {
+        width: 100%;
+        min-height: auto;
+        padding: 75px 6% 55px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.4rem, 8vw, 3.2rem);
+    }
+
+    .hero-description {
+        font-size: 0.93rem;
+    }
+
+    .hero-stats {
+        gap: 22px;
+        margin-top: 30px;
+    }
+
+    .hero-visual {
+        min-height: 390px;
+    }
+
+    .hero-photo-wrapper {
+        width: min(70%, 300px);
+    }
+}
+
+/* Celulares pequenos */
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.35rem;
+        letter-spacing: -1.2px;
+    }
+
+    .hero-description {
+        font-size: 0.88rem;
+        line-height: 1.8;
+    }
+
+    .hero-socials {
+        gap: 9px;
+    }
+
+    .hero-socials .hero-cv-button {
+        padding-inline: 12px;
+        font-size: 0.75rem;
+    }
+
+    .hero-stats {
+        gap: 16px;
+    }
+
+    .hero-stat {
+        min-width: 78px;
+    }
+
+    .hero-visual {
+        min-height: 330px;
+    }
+
+    .hero-photo-wrapper {
+        width: min(72%, 270px);
+    }
 }
