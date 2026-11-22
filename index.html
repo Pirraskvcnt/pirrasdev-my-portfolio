@@ -12,6 +12,7 @@
     <meta name="theme-color" content="#09090D">
 
     <title>PirrasDev | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -78,71 +79,79 @@
     </nav>
 
     <!-- Controles -->
+    
     <div class="header-controls">
 
-        <!-- Idiomas -->
-        <div class="language-switch"
-             role="group"
-             aria-label="Selecionar idioma">
+        <!-- Seletor de idioma -->
+        <div class="language-control">
+            <select
+                class="language-select"
+                id="language-select"
+                aria-label="Selecionar idioma"
+            >
+                <option value="pt">🇧🇷 Português</option>
+                <option value="en">🇺🇸 English</option>
+            </select>
 
-            <button
-                type="button"
-                class="language-option is-active"
-                data-language="pt"
-                lang="pt-BR"
-                aria-label="Português"
-                aria-pressed="true"
-                title="Português">
-
-                🇧🇷
-
-            </button>
-
-            <button
-                type="button"
-                class="language-option"
-                data-language="en"
-                lang="en"
-                aria-label="English"
-                aria-pressed="false"
-                title="English">
-
-                🇺🇸
-
-            </button>
-
+            <span class="language-chevron">⌄</span>
         </div>
 
-        <!-- Alternância de tema -->
+        <!-- Alternar tema -->
         <button
             type="button"
             class="theme-toggle"
-            aria-label="Alternar tema claro ou escuro"
-            aria-pressed="true">
+            aria-label="Alternar tema"
+            aria-pressed="true"
+            title="Alternar tema claro e escuro"
+        >
 
-            <span class="theme-toggle-track" aria-hidden="true">
-                <span class="theme-toggle-thumb"></span>
+            <!-- Sol -->
+            <span class="theme-icon sun-icon">
+                <svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round">
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M12 2v2"/>
+                    <path d="M12 20v2"/>
+                    <path d="m4.93 4.93 1.42 1.42"/>
+                    <path d="m17.65 17.65 1.42 1.42"/>
+                    <path d="M2 12h2"/>
+                    <path d="M20 12h2"/>
+                    <path d="m6.35 17.65-1.42 1.42"/>
+                    <path d="m19.07 4.93-1.42 1.42"/>
+                </svg>
+            </span>
+
+            <!-- Lua -->
+            <span class="theme-icon moon-icon">
+                <svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.9 13A9 9 0 0 1 11 3.1
+                            9 9 0 1 0 20.9 13Z"/>
+                </svg>
             </span>
 
         </button>
 
     </div>
 
-    <!-- Menu mobile -->
-    <button
-        type="button"
-        class="menu-toggle"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-        aria-controls="primary-navigation">
 
-        <span></span>
-        <span></span>
-        <span></span>
+        <!-- Menu mobile -->
+        <button
+            type="button"
+            class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation">
 
-    </button>
+            <span></span>
+            <span></span>
+            <span></span>
 
-</header>
+        </button>
+
+    </header>
 
 
     <!-- =================================
