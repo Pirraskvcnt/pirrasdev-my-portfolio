@@ -14,6 +14,9 @@
     <title>PirrasDev | Portfólio</title>
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
     <link rel="stylesheet" href="css/style.css">
 
     <!-- As traduções precisam carregar antes do script principal -->
@@ -623,140 +626,233 @@
             </div>
         </section>
 
+        
+        
         <!-- =================================
-             SKILLS - HABILIDADES
+            SKILLS - HABILIDADES
         ================================== -->
 
         <section class="skills section"
-                 id="habilidades"
-                 aria-labelledby="skills-title">
+                id="habilidades"
+                aria-labelledby="skills-title">
 
+            <!-- Cabeçalho -->
             <div class="section-heading">
 
                 <p class="section-eyebrow" data-i18n="skills.eyebrow">
-                    HABILIDADES
+                    CONHECIMENTOS
                 </p>
 
                 <h2 id="skills-title" data-i18n="skills.title">
-                    Tecnologias e conhecimentos.
+                    Skills
                 </h2>
-
-                <p data-i18n="skills.description">
-                    Tecnologias que venho estudando e utilizando
-                    para desenvolver minha base na computação.
-                </p>
 
             </div>
 
-            <div class="skills-grid">
+            <!-- =================================
+                MODO 1 - CATEGORIAS
+            ================================== -->
 
-                <!-- Linguagens -->
-                <article class="skill-card">
+            <div class="skills-grid" id="skills-grid">
 
-                    <h3 data-i18n="skills.programming">
-                        Linguagens de programação
-                    </h3>
+                <!-- BACKEND -->
+                <article class="skill-card skill-category-card">
 
-                    <ul class="skill-list">
+                    <h3 data-i18n="skills.backend">Backend</h3>
 
-                        <li class="skill-item">
-                            <span class="skill-name">Java</span>
-                            <span class="skill-level" data-i18n="status.learning">
-                                Em aprendizado
-                            </span>
-                        </li>
+                    <div class="skill-logos">
 
-                        <li class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <span class="skill-level" data-i18n="status.basic">
-                                Conhecimentos básicos
-                            </span>
-                        </li>
+                        <span class="skill-logo" title="Java" role="img" aria-label="Java">
+                            <i class="devicon-java-plain colored" aria-hidden="true"></i>
+                        </span>
 
-                    </ul>
+                        <span class="skill-logo" title="Python" role="img" aria-label="Python">
+                            <i class="devicon-python-plain colored" aria-hidden="true"></i>
+                        </span>
+
+                    </div>
                 </article>
 
-                <!-- Desenvolvimento web -->
-                <article class="skill-card">
+                <!-- FRONTEND -->
+                <article class="skill-card skill-category-card">
 
-                    <h3 data-i18n="skills.web">
-                        Desenvolvimento web
-                    </h3>
+                    <h3 data-i18n="skills.frontend">Frontend</h3>
 
-                    <ul class="skill-list">
+                    <div class="skill-logos">
 
-                        <li class="skill-item">
-                            <span class="skill-name">HTML5</span>
-                            <span class="skill-level" data-i18n="status.practice">
-                                Em prática
-                            </span>
-                        </li>
+                        <span class="skill-logo" title="HTML5" role="img" aria-label="HTML5">
+                            <i class="devicon-html5-plain colored" aria-hidden="true"></i>
+                        </span>
 
-                        <li class="skill-item">
-                            <span class="skill-name">CSS3</span>
-                            <span class="skill-level" data-i18n="status.practice">
-                                Em prática
-                            </span>
-                        </li>
+                        <span class="skill-logo" title="CSS3" role="img" aria-label="CSS3">
+                            <i class="devicon-css3-plain colored" aria-hidden="true"></i>
+                        </span>
 
-                        <li class="skill-item">
-                            <span class="skill-name">JavaScript</span>
-                            <span class="skill-level" data-i18n="status.learning">
-                                Em aprendizado
-                            </span>
-                        </li>
+                        <span class="skill-logo" title="JavaScript" role="img" aria-label="JavaScript">
+                            <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
+                        </span>
 
-                    </ul>
+                    </div>
                 </article>
 
-                <!-- Banco de dados -->
-                <article class="skill-card">
+                <!-- BANCO DE DADOS -->
+                <article class="skill-card skill-category-card">
 
                     <h3 data-i18n="skills.database">Banco de dados</h3>
 
-                    <ul class="skill-list">
-                        <li class="skill-item">
-                            <span class="skill-name">MySQL</span>
-                            <span class="skill-level" data-i18n="status.learning">
-                                Em aprendizado
-                            </span>
-                        </li>
-                    </ul>
+                    <div class="skill-logos">
+
+                        <span class="skill-logo" title="MySQL" role="img" aria-label="MySQL">
+                            <i class="devicon-mysql-plain colored" aria-hidden="true"></i>
+                        </span>
+
+                    </div>
                 </article>
 
-                <!-- Ferramentas -->
-                <article class="skill-card">
+                <!-- FERRAMENTAS -->
+                <article class="skill-card skill-category-card">
 
                     <h3 data-i18n="skills.tools">Ferramentas</h3>
 
-                    <ul class="skill-list">
+                    <div class="skill-logos">
 
-                        <li class="skill-item">
-                            <span class="skill-name">Git</span>
-                            <span class="skill-level" data-i18n="status.practice">
-                                Em prática
-                            </span>
-                        </li>
+                        <span class="skill-logo" title="Git" role="img" aria-label="Git">
+                            <i class="devicon-git-plain colored" aria-hidden="true"></i>
+                        </span>
 
-                        <li class="skill-item">
-                            <span class="skill-name">GitHub</span>
-                            <span class="skill-level" data-i18n="status.practice">
-                                Em prática
-                            </span>
-                        </li>
+                        <span class="skill-logo skill-logo-github" title="GitHub" role="img" aria-label="GitHub">
+                            <i class="devicon-github-original" aria-hidden="true"></i>
+                        </span>
 
-                        <li class="skill-item">
-                            <span class="skill-name">VS Code</span>
-                            <span class="skill-level" data-i18n="status.practice">
-                                Em prática
-                            </span>
-                        </li>
+                        <span class="skill-logo" title="IntelliJ IDEA" role="img" aria-label="IntelliJ IDEA">
+                            <i class="devicon-intellij-plain colored" aria-hidden="true"></i>
+                        </span>
 
-                    </ul>
+                        <span class="skill-logo" title="Visual Studio Code" role="img" aria-label="Visual Studio Code">
+                            <i class="devicon-vscode-plain colored" aria-hidden="true"></i>
+                        </span>
+
+                    </div>
                 </article>
 
             </div>
+
+            <!-- =================================
+                BOTÃO DE ALTERNÂNCIA
+            ================================== -->
+
+            <div class="skills-view-control">
+
+                <button
+                    type="button"
+                    class="skills-view-toggle"
+                    id="skills-view-toggle"
+                    aria-expanded="false"
+                    aria-controls="skills-grid skills-wheel">
+
+                    <span class="skills-toggle-icon" aria-hidden="true">⟳</span>
+
+                    <span class="skills-toggle-label" data-i18n="skills.viewWheel">
+                        Explorar tecnologias em órbita
+                    </span>
+
+                </button>
+
+            </div>
+
+            <!-- =================================
+                MODO 2 - ROLETA CIRCULAR
+            ================================== -->
+
+            <div class="skills-wheel"
+                id="skills-wheel"
+                hidden
+                aria-label="Tecnologias em movimento">
+
+                <div class="skills-wheel-stage">
+
+                    <!-- Círculo decorativo -->
+                    <div class="skills-wheel-ring"></div>
+
+                    <!-- Centro -->
+                    <div class="skills-wheel-center">
+                        <span>MY</span>
+                        <strong>STACK</strong>
+                        <small>TECHNOLOGIES</small>
+                    </div>
+
+                    <!-- Tecnologias orbitando -->
+                    <div class="skills-wheel-orbit">
+
+                        <span class="skill-orbit-item" title="Java" style="--angle: 0deg; --counter-angle: 0deg;">
+                            <span class="skill-orbit-icon">
+                                <i class="devicon-java-plain colored" aria-hidden="true"></i>
+                            </span>
+                        </span>
+
+                        <span class="skill-orbit-item" title="Python" style="--angle: 36deg; --counter-angle: -36deg;">
+                            <span class="skill-orbit-icon">
+                                <i class="devicon-python-plain colored" aria-hidden="true"></i>
+                            </span>
+                        </span>
+
+                        <span class="skill-orbit-item" title="HTML5" style="--angle: 72deg; --counter-angle: -72deg;">
+                            <span class="skill-orbit-icon">
+                                <i class="devicon-html5-plain colored" aria-hidden="true"></i>
+                            </span>
+                        </span>
+
+                        <span class="skill-orbit-item" title="CSS3" style="--angle: 108deg; --counter-angle: -108deg;">
+                            <span class="skill-orbit-icon">
+                                <i class="devicon-css3-plain colored" aria-hidden="true"></i>
+                            </span>
+                        </span>
+
+                        <span class="skill-orbit-item" title="JavaScript" style="--angle: 144deg; --counter-angle: -144deg;">
+                            <span class="skill-orbit-icon">
+                                <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
+                            </span>
+                        </span>
+
+                        <span class="skill-orbit-item" title="MySQL" style="--angle: 180deg; --counter-angle: -180deg;">
+                            <span class="skill-orbit-icon">
+                                <i class="devicon-mysql-plain colored" aria-hidden="true"></i>
+                            </span>
+                        </span>
+
+                        <span class="skill-orbit-item" title="Git" style="--angle: 216deg; --counter-angle: -216deg;">
+                            <span class="skill-orbit-icon">
+                                <i class="devicon-git-plain colored" aria-hidden="true"></i>
+                            </span>
+                        </span>
+
+                        <span class="skill-orbit-item skill-orbit-github" title="GitHub" style="--angle: 252deg; --counter-angle: -252deg;">
+                            <span class="skill-orbit-icon">
+                                <i class="devicon-github-original" aria-hidden="true"></i>
+                            </span>
+                        </span>
+
+                        <span class="skill-orbit-item" title="IntelliJ IDEA" style="--angle: 288deg; --counter-angle: -288deg;">
+                            <span class="skill-orbit-icon">
+                                <i class="devicon-intellij-plain colored" aria-hidden="true"></i>
+                            </span>
+                        </span>
+
+                        <span class="skill-orbit-item" title="VS Code" style="--angle: 324deg; --counter-angle: -324deg;">
+                            <span class="skill-orbit-icon">
+                                <i class="devicon-vscode-plain colored" aria-hidden="true"></i>
+                            </span>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
+
+
 
         <!-- =================================
              PROJECTS - PROJETOS

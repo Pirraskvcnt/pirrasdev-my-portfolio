@@ -104,13 +104,14 @@ window.PIRRAS_TRANSLATIONS = {
         "about.personal.family": "Família",
 
         /* Skills */
-        "skills.eyebrow": "HABILIDADES",
-        "skills.title": "Tecnologias e conhecimentos.",
-        "skills.description": "Tecnologias que venho estudando e utilizando para desenvolver minha base na computação.",
-        "skills.programming": "Linguagens de programação",
-        "skills.web": "Desenvolvimento web",
+        "skills.eyebrow": "CONHECIMENTOS",
+        "skills.title": "Skills",
+        "skills.backend": "Backend",
+        "skills.frontend": "Frontend",
         "skills.database": "Banco de dados",
         "skills.tools": "Ferramentas",
+        "skills.viewWheel": "Explorar tecnologias em órbita",
+        "skills.viewCategories": "Voltar às categorias",
 
         /* Status das habilidades e projetos */
         "status.learning": "Em aprendizado",
@@ -240,13 +241,14 @@ window.PIRRAS_TRANSLATIONS = {
         "about.personal.family": "Family",
 
         /* Skills */
-        "skills.eyebrow": "SKILLS",
-        "skills.title": "Technologies and knowledge.",
-        "skills.description": "Technologies I have been studying and using to build my foundation in computer science.",
-        "skills.programming": "Programming languages",
-        "skills.web": "Web development",
-        "skills.database": "Databases",
+        "skills.eyebrow": "KNOWLEDGE",
+        "skills.title": "Skills",
+        "skills.backend": "Backend",
+        "skills.frontend": "Frontend",
+        "skills.database": "Database",
         "skills.tools": "Tools",
+        "skills.viewWheel": "Explore the technology orbit",
+        "skills.viewCategories": "Back to categories",
 
         /* Skill and project status */
         "status.learning": "Currently learning",

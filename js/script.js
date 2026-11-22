@@ -667,3 +667,84 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+
+/* =========================================
+   SKILLS - ALTERNAR CATEGORIAS E ROLETA
+========================================= */
+
+(() => {
+
+    function initSkillsToggle() {
+
+        const button = document.querySelector("#skills-view-toggle");
+        const categories = document.querySelector("#skills-grid");
+        const wheel = document.querySelector("#skills-wheel");
+
+        if (!button || !categories || !wheel) {
+            return;
+        }
+
+        const label = button.querySelector(".skills-toggle-label");
+        const icon = button.querySelector(".skills-toggle-icon");
+
+        function updateButtonLabel(showWheel) {
+
+            const language =
+                document.documentElement.lang.startsWith("en")
+                    ? "en"
+                    : "pt";
+
+            const dictionary = window.PIRRAS_TRANSLATIONS?.[language];
+
+            const key = showWheel
+                ? "skills.viewCategories"
+                : "skills.viewWheel";
+
+            if (label && dictionary?.[key]) {
+                label.dataset.i18n = key;
+                label.textContent = dictionary[key];
+            }
+
+            if (icon) {
+                icon.textContent = showWheel ? "↩" : "⟳";
+            }
+
+        }
+
+        button.addEventListener("click", () => {
+
+            const showWheel = wheel.hidden;
+
+            // Alterna a visibilidade
+            categories.hidden = showWheel;
+            wheel.hidden = !showWheel;
+
+            // Atualiza acessibilidade
+            button.setAttribute(
+                "aria-expanded",
+                String(showWheel)
+            );
+
+            // Atualiza texto e ícone
+            updateButtonLabel(showWheel);
+
+        });
+
+        // Estado inicial
+        categories.hidden = false;
+        wheel.hidden = true;
+
+        button.setAttribute("aria-expanded", "false");
+
+        updateButtonLabel(false);
+
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initSkillsToggle);
+    } else {
+        initSkillsToggle();
+    }
+
+})();
