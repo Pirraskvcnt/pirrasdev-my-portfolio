@@ -35,6 +35,9 @@
     --shadow-card:
         0 10px 35px rgba(0, 0, 0, 0.15);
 
+    --toggle-track: #292333;
+    --toggle-thumb: #FFFFFF;
+
 }
 
 
@@ -64,6 +67,9 @@ html[data-theme="light"] {
 
     --shadow-card:
         0 10px 35px rgba(40, 25, 60, 0.06);
+
+    --toggle-track: #DDD7E8;
+    --toggle-thumb: #09090D;
 
 }
 
@@ -197,14 +203,15 @@ a:focus-visible {
 .logo {
     font-size: 1.6rem;
     font-weight: 800;
-    letter-spacing: -2px;
-
-    color: var(--text-primary);
-
+    letter-spacing: -1px;
     white-space: nowrap;
 }
 
-.logo span {
+.logo-name {
+    color: var(--text-primary);
+}
+
+.logo-accent {
     color: var(--color-primary);
 }
 
@@ -236,38 +243,127 @@ a:focus-visible {
 }
 
 
-/* Controles */
+
+/* =========================================
+   HEADER - CONTROLES
+========================================= */
 
 .header-controls {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
-.language-toggle,
-.theme-toggle {
 
-    padding: 8px 12px;
+/* Seletor de idioma */
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    padding: 4px;
+
+    background-color: var(--bg-secondary);
+
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+}
+
+.language-option {
+    width: 34px;
+    height: 30px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 0;
 
     background: transparent;
 
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border: 1px solid transparent;
+    border-radius: 999px;
 
-    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1;
 
-    font-size: 0.78rem;
-    font-weight: 600;
+    opacity: 0.55;
+
+    cursor: pointer;
 
     transition: all var(--transition);
 }
 
-.language-toggle:hover,
-.theme-toggle:hover {
+.language-option:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
 
+.language-option.is-active {
+    opacity: 1;
+
+    background-color: var(--bg-card);
+
+    border-color: var(--border-color);
+}
+
+
+/* Interruptor de tema */
+
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+.theme-toggle-track {
+    width: 48px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 4px;
+
+    background-color: var(--toggle-track);
+
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+
+    transition: all var(--transition);
+}
+
+.theme-toggle-thumb {
+    width: 18px;
+    height: 18px;
+
+    display: block;
+
+    background-color: var(--toggle-thumb);
+
+    border-radius: 50%;
+
+    transition: all var(--transition);
+}
+
+/* Posicionamento no Light Mode */
+
+html[data-theme="light"] .theme-toggle-track {
+    justify-content: flex-end;
+}
+
+/* Efeito ao passar o mouse */
+
+.theme-toggle:hover .theme-toggle-track {
     border-color: var(--color-primary);
-    color: var(--color-primary);
-
 }
 
 
@@ -1251,7 +1347,7 @@ a:focus-visible {
 
         display: flex;
 
-        margin-left: auto;
+        margin-left: 0;
 
     }
 
@@ -1314,7 +1410,8 @@ a:focus-visible {
     /* Controles do header */
 
     .header-controls {
-        gap: 7px;
+        gap: 8px;
+        margin-left: auto;
     }
 
     .language-toggle,

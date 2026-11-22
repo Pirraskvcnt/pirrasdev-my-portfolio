@@ -32,93 +32,114 @@
          HEADER - NAVEGAÇÃO
     ================================== -->
 
-    <header class="site-header">
+<header class="site-header">
 
-        <!-- Logo -->
-        <a href="#inicio" class="logo" aria-label="Pierre Cavalcante - Início">
-            PC<span>.</span>
-        </a>
+    <!-- Logo -->
+    <a href="#inicio" class="logo" aria-label="PirrasDev - Início">
+        <span class="logo-name">Pirras</span><span class="logo-accent">Dev</span>
+    </a>
 
-        <!-- Botão do menu mobile -->
-        <button
-            type="button"
-            class="menu-toggle"
-            aria-label="Abrir menu"
-            aria-expanded="false"
-            aria-controls="primary-navigation">
+    <!-- Navegação -->
+    <nav class="main-nav"
+         id="primary-navigation"
+         aria-label="Navegação principal">
 
-            <span></span>
-            <span></span>
-            <span></span>
+        <ul>
 
-        </button>
+            <li>
+                <a href="#sobre" data-i18n="nav.about">
+                    Sobre mim
+                </a>
+            </li>
 
-        <!-- Navegação -->
-        <nav
-            class="main-nav"
-            id="primary-navigation"
-            aria-label="Navegação principal">
+            <li>
+                <a href="#habilidades" data-i18n="nav.skills">
+                    Skills
+                </a>
+            </li>
 
-            <ul>
-                <li>
-                    <a href="#inicio" data-i18n="nav.home">
-                        Início
-                    </a>
-                </li>
+            <li>
+                <a href="#projetos" data-i18n="nav.projects">
+                    Projetos
+                </a>
+            </li>
 
-                <li>
-                    <a href="#sobre" data-i18n="nav.about">
-                        Sobre
-                    </a>
-                </li>
+            <li>
+                <a href="#contato" data-i18n="nav.contact">
+                    Contato
+                </a>
+            </li>
 
-                <li>
-                    <a href="#habilidades" data-i18n="nav.skills">
-                        Habilidades
-                    </a>
-                </li>
+        </ul>
 
-                <li>
-                    <a href="#projetos" data-i18n="nav.projects">
-                        Projetos
-                    </a>
-                </li>
+    </nav>
 
-                <li>
-                    <a href="#contato" data-i18n="nav.contact">
-                        Contato
-                    </a>
-                </li>
-            </ul>
+    <!-- Controles -->
+    <div class="header-controls">
 
-        </nav>
-
-        <!-- Controles de idioma e tema -->
-        <div class="header-controls">
+        <!-- Idiomas -->
+        <div class="language-switch"
+             role="group"
+             aria-label="Selecionar idioma">
 
             <button
                 type="button"
-                class="language-toggle"
-                aria-label="Alterar idioma"
-                data-i18n-aria-label="controls.language">
+                class="language-option is-active"
+                data-language="pt"
+                lang="pt-BR"
+                aria-label="Português"
+                aria-pressed="true"
+                title="Português">
 
-                PT / EN
+                🇧🇷
 
             </button>
 
             <button
                 type="button"
-                class="theme-toggle"
-                aria-label="Alternar tema"
-                data-i18n-aria-label="controls.theme">
+                class="language-option"
+                data-language="en"
+                lang="en"
+                aria-label="English"
+                aria-pressed="false"
+                title="English">
 
-                Tema
+                🇺🇸
 
             </button>
 
         </div>
 
-    </header>
+        <!-- Alternância de tema -->
+        <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Alternar tema claro ou escuro"
+            aria-pressed="true">
+
+            <span class="theme-toggle-track" aria-hidden="true">
+                <span class="theme-toggle-thumb"></span>
+            </span>
+
+        </button>
+
+    </div>
+
+    <!-- Menu mobile -->
+    <button
+        type="button"
+        class="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+</header>
 
 
     <!-- =================================
