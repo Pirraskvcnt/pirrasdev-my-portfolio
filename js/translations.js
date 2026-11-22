@@ -110,8 +110,7 @@ window.PIRRAS_TRANSLATIONS = {
         "skills.frontend": "Frontend",
         "skills.database": "Banco de dados",
         "skills.tools": "Ferramentas",
-        "skills.viewWheel": "Explorar tecnologias em órbita",
-        "skills.viewCategories": "Voltar às categorias",
+        "skills.orbitLabel": "Órbita das tecnologias da minha stack",
 
         /* Status das habilidades e projetos */
         "status.learning": "Em aprendizado",
@@ -247,8 +246,7 @@ window.PIRRAS_TRANSLATIONS = {
         "skills.frontend": "Frontend",
         "skills.database": "Database",
         "skills.tools": "Tools",
-        "skills.viewWheel": "Explore the technology orbit",
-        "skills.viewCategories": "Back to categories",
+        "skills.orbitLabel": "Orbit of technologies in my stack",
 
         /* Skill and project status */
         "status.learning": "Currently learning",

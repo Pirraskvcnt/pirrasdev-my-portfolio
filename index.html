@@ -627,9 +627,8 @@
         </section>
 
         
-        
         <!-- =================================
-            SKILLS - HABILIDADES
+            SKILLS - ÁRVORE DE CONHECIMENTOS
         ================================== -->
 
         <section class="skills section"
@@ -649,203 +648,215 @@
 
             </div>
 
-            <!-- =================================
-                MODO 1 - CATEGORIAS
-            ================================== -->
+            <!-- Cards à esquerda + órbita à direita -->
+            <div class="skills-showcase">
 
-            <div class="skills-grid" id="skills-grid">
+                <!-- =================================
+                    RAMOS DE CONHECIMENTO
+                ================================== -->
 
-                <!-- BACKEND -->
-                <article class="skill-card skill-category-card">
+                <div class="skills-grid" id="skills-grid">
 
-                    <h3 data-i18n="skills.backend">Backend</h3>
+                    <!-- BACKEND -->
+                    <article class="skill-card skill-category-card">
 
-                    <div class="skill-logos">
+                        <h3 data-i18n="skills.backend">Backend</h3>
 
-                        <span class="skill-logo" title="Java" role="img" aria-label="Java">
-                            <i class="devicon-java-plain colored" aria-hidden="true"></i>
-                        </span>
+                        <div class="skill-logos">
 
-                        <span class="skill-logo" title="Python" role="img" aria-label="Python">
-                            <i class="devicon-python-plain colored" aria-hidden="true"></i>
-                        </span>
-
-                    </div>
-                </article>
-
-                <!-- FRONTEND -->
-                <article class="skill-card skill-category-card">
-
-                    <h3 data-i18n="skills.frontend">Frontend</h3>
-
-                    <div class="skill-logos">
-
-                        <span class="skill-logo" title="HTML5" role="img" aria-label="HTML5">
-                            <i class="devicon-html5-plain colored" aria-hidden="true"></i>
-                        </span>
-
-                        <span class="skill-logo" title="CSS3" role="img" aria-label="CSS3">
-                            <i class="devicon-css3-plain colored" aria-hidden="true"></i>
-                        </span>
-
-                        <span class="skill-logo" title="JavaScript" role="img" aria-label="JavaScript">
-                            <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
-                        </span>
-
-                    </div>
-                </article>
-
-                <!-- BANCO DE DADOS -->
-                <article class="skill-card skill-category-card">
-
-                    <h3 data-i18n="skills.database">Banco de dados</h3>
-
-                    <div class="skill-logos">
-
-                        <span class="skill-logo" title="MySQL" role="img" aria-label="MySQL">
-                            <i class="devicon-mysql-plain colored" aria-hidden="true"></i>
-                        </span>
-
-                    </div>
-                </article>
-
-                <!-- FERRAMENTAS -->
-                <article class="skill-card skill-category-card">
-
-                    <h3 data-i18n="skills.tools">Ferramentas</h3>
-
-                    <div class="skill-logos">
-
-                        <span class="skill-logo" title="Git" role="img" aria-label="Git">
-                            <i class="devicon-git-plain colored" aria-hidden="true"></i>
-                        </span>
-
-                        <span class="skill-logo skill-logo-github" title="GitHub" role="img" aria-label="GitHub">
-                            <i class="devicon-github-original" aria-hidden="true"></i>
-                        </span>
-
-                        <span class="skill-logo" title="IntelliJ IDEA" role="img" aria-label="IntelliJ IDEA">
-                            <i class="devicon-intellij-plain colored" aria-hidden="true"></i>
-                        </span>
-
-                        <span class="skill-logo" title="Visual Studio Code" role="img" aria-label="Visual Studio Code">
-                            <i class="devicon-vscode-plain colored" aria-hidden="true"></i>
-                        </span>
-
-                    </div>
-                </article>
-
-            </div>
-
-            <!-- =================================
-                BOTÃO DE ALTERNÂNCIA
-            ================================== -->
-
-            <div class="skills-view-control">
-
-                <button
-                    type="button"
-                    class="skills-view-toggle"
-                    id="skills-view-toggle"
-                    aria-expanded="false"
-                    aria-controls="skills-grid skills-wheel">
-
-                    <span class="skills-toggle-icon" aria-hidden="true">⟳</span>
-
-                    <span class="skills-toggle-label" data-i18n="skills.viewWheel">
-                        Explorar tecnologias em órbita
-                    </span>
-
-                </button>
-
-            </div>
-
-            <!-- =================================
-                MODO 2 - ROLETA CIRCULAR
-            ================================== -->
-
-            <div class="skills-wheel"
-                id="skills-wheel"
-                hidden
-                aria-label="Tecnologias em movimento">
-
-                <div class="skills-wheel-stage">
-
-                    <!-- Círculo decorativo -->
-                    <div class="skills-wheel-ring"></div>
-
-                    <!-- Centro -->
-                    <div class="skills-wheel-center">
-                        <span>MY</span>
-                        <strong>STACK</strong>
-                        <small>TECHNOLOGIES</small>
-                    </div>
-
-                    <!-- Tecnologias orbitando -->
-                    <div class="skills-wheel-orbit">
-
-                        <span class="skill-orbit-item" title="Java" style="--angle: 0deg; --counter-angle: 0deg;">
-                            <span class="skill-orbit-icon">
+                            <span class="skill-logo" title="Java" role="img" aria-label="Java">
                                 <i class="devicon-java-plain colored" aria-hidden="true"></i>
                             </span>
-                        </span>
 
-                        <span class="skill-orbit-item" title="Python" style="--angle: 36deg; --counter-angle: -36deg;">
-                            <span class="skill-orbit-icon">
+                            <span class="skill-logo" title="Python" role="img" aria-label="Python">
                                 <i class="devicon-python-plain colored" aria-hidden="true"></i>
                             </span>
-                        </span>
 
-                        <span class="skill-orbit-item" title="HTML5" style="--angle: 72deg; --counter-angle: -72deg;">
-                            <span class="skill-orbit-icon">
+                        </div>
+                    </article>
+
+                    <!-- FRONTEND -->
+                    <article class="skill-card skill-category-card">
+
+                        <h3 data-i18n="skills.frontend">Frontend</h3>
+
+                        <div class="skill-logos">
+
+                            <span class="skill-logo" title="HTML5" role="img" aria-label="HTML5">
                                 <i class="devicon-html5-plain colored" aria-hidden="true"></i>
                             </span>
-                        </span>
 
-                        <span class="skill-orbit-item" title="CSS3" style="--angle: 108deg; --counter-angle: -108deg;">
-                            <span class="skill-orbit-icon">
+                            <span class="skill-logo" title="CSS3" role="img" aria-label="CSS3">
                                 <i class="devicon-css3-plain colored" aria-hidden="true"></i>
                             </span>
-                        </span>
 
-                        <span class="skill-orbit-item" title="JavaScript" style="--angle: 144deg; --counter-angle: -144deg;">
-                            <span class="skill-orbit-icon">
+                            <span class="skill-logo" title="JavaScript" role="img" aria-label="JavaScript">
                                 <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
                             </span>
-                        </span>
 
-                        <span class="skill-orbit-item" title="MySQL" style="--angle: 180deg; --counter-angle: -180deg;">
-                            <span class="skill-orbit-icon">
+                        </div>
+                    </article>
+
+                    <!-- BANCO DE DADOS -->
+                    <article class="skill-card skill-category-card">
+
+                        <h3 data-i18n="skills.database">Banco de dados</h3>
+
+                        <div class="skill-logos">
+
+                            <span class="skill-logo" title="MySQL" role="img" aria-label="MySQL">
                                 <i class="devicon-mysql-plain colored" aria-hidden="true"></i>
                             </span>
-                        </span>
 
-                        <span class="skill-orbit-item" title="Git" style="--angle: 216deg; --counter-angle: -216deg;">
-                            <span class="skill-orbit-icon">
+                        </div>
+                    </article>
+
+                    <!-- FERRAMENTAS -->
+                    <article class="skill-card skill-category-card">
+
+                        <h3 data-i18n="skills.tools">Ferramentas</h3>
+
+                        <div class="skill-logos">
+
+                            <span class="skill-logo" title="Git" role="img" aria-label="Git">
                                 <i class="devicon-git-plain colored" aria-hidden="true"></i>
                             </span>
-                        </span>
 
-                        <span class="skill-orbit-item skill-orbit-github" title="GitHub" style="--angle: 252deg; --counter-angle: -252deg;">
-                            <span class="skill-orbit-icon">
+                            <span class="skill-logo skill-logo-github" title="GitHub" role="img" aria-label="GitHub">
                                 <i class="devicon-github-original" aria-hidden="true"></i>
                             </span>
-                        </span>
 
-                        <span class="skill-orbit-item" title="IntelliJ IDEA" style="--angle: 288deg; --counter-angle: -288deg;">
-                            <span class="skill-orbit-icon">
+                            <span class="skill-logo" title="IntelliJ IDEA" role="img" aria-label="IntelliJ IDEA">
                                 <i class="devicon-intellij-plain colored" aria-hidden="true"></i>
                             </span>
-                        </span>
 
-                        <span class="skill-orbit-item" title="VS Code" style="--angle: 324deg; --counter-angle: -324deg;">
-                            <span class="skill-orbit-icon">
+                            <span class="skill-logo" title="VS Code" role="img" aria-label="Visual Studio Code">
                                 <i class="devicon-vscode-plain colored" aria-hidden="true"></i>
                             </span>
-                        </span>
 
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- =================================
+                    ÓRBITA DE TECNOLOGIAS
+                ================================== -->
+
+                <div class="skills-wheel"
+                    role="img"
+                    aria-label="Órbita com as tecnologias da minha stack"
+                    data-i18n-aria-label="skills.orbitLabel">
+
+                    <div class="skills-wheel-stage">
+
+                        <!-- Anel decorativo -->
+                        <div class="skills-wheel-ring"></div>
+
+                        <!-- Centro da órbita -->
+                        <div class="skills-wheel-center">
+
+                            <span>MY</span>
+                            <strong>STACK</strong>
+                            <small>KNOWLEDGE ORBIT</small>
+
+                        </div>
+
+                        <!-- Tecnologias em órbita -->
+                        <div class="skills-wheel-orbit">
+
+                            <span class="skill-orbit-item"
+                                style="--angle: 0deg;"
+                                title="Java"
+                                aria-hidden="true">
+                                <span class="skill-orbit-icon">
+                                    <i class="devicon-java-plain colored"></i>
+                                </span>
+                            </span>
+
+                            <span class="skill-orbit-item"
+                                style="--angle: 36deg;"
+                                title="Python"
+                                aria-hidden="true">
+                                <span class="skill-orbit-icon">
+                                    <i class="devicon-python-plain colored"></i>
+                                </span>
+                            </span>
+
+                            <span class="skill-orbit-item"
+                                style="--angle: 72deg;"
+                                title="HTML5"
+                                aria-hidden="true">
+                                <span class="skill-orbit-icon">
+                                    <i class="devicon-html5-plain colored"></i>
+                                </span>
+                            </span>
+
+                            <span class="skill-orbit-item"
+                                style="--angle: 108deg;"
+                                title="CSS3"
+                                aria-hidden="true">
+                                <span class="skill-orbit-icon">
+                                    <i class="devicon-css3-plain colored"></i>
+                                </span>
+                            </span>
+
+                            <span class="skill-orbit-item"
+                                style="--angle: 144deg;"
+                                title="JavaScript"
+                                aria-hidden="true">
+                                <span class="skill-orbit-icon">
+                                    <i class="devicon-javascript-plain colored"></i>
+                                </span>
+                            </span>
+
+                            <span class="skill-orbit-item"
+                                style="--angle: 180deg;"
+                                title="MySQL"
+                                aria-hidden="true">
+                                <span class="skill-orbit-icon">
+                                    <i class="devicon-mysql-plain colored"></i>
+                                </span>
+                            </span>
+
+                            <span class="skill-orbit-item"
+                                style="--angle: 216deg;"
+                                title="Git"
+                                aria-hidden="true">
+                                <span class="skill-orbit-icon">
+                                    <i class="devicon-git-plain colored"></i>
+                                </span>
+                            </span>
+
+                            <span class="skill-orbit-item"
+                                style="--angle: 252deg;"
+                                title="GitHub"
+                                aria-hidden="true">
+                                <span class="skill-orbit-icon">
+                                    <i class="devicon-github-original"></i>
+                                </span>
+                            </span>
+
+                            <span class="skill-orbit-item"
+                                style="--angle: 288deg;"
+                                title="IntelliJ IDEA"
+                                aria-hidden="true">
+                                <span class="skill-orbit-icon">
+                                    <i class="devicon-intellij-plain colored"></i>
+                                </span>
+                            </span>
+
+                            <span class="skill-orbit-item"
+                                style="--angle: 324deg;"
+                                title="Visual Studio Code"
+                                aria-hidden="true">
+                                <span class="skill-orbit-icon">
+                                    <i class="devicon-vscode-plain colored"></i>
+                                </span>
+                            </span>
+
+                        </div>
                     </div>
-
                 </div>
 
             </div>

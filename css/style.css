@@ -866,21 +866,22 @@ html[data-theme="light"] .theme-toggle-track {
 
 
 /* =========================================
-   9. SKILLS - HABILIDADES
+   9. SKILLS - ÁRVORE DE CONHECIMENTOS
 ========================================= */
 
 /* Cabeçalho */
 
 .skills .section-heading {
-    margin-bottom: 38px;
+    margin-bottom: 42px;
 }
 
 .skills .section-eyebrow {
+    margin-bottom: 14px;
+
     color: var(--color-primary);
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 14px;
 }
 
 .skills .section-heading h2 {
@@ -894,23 +895,36 @@ html[data-theme="light"] .theme-toggle-track {
 }
 
 /* =========================================
+   ESTRUTURA PRINCIPAL
+========================================= */
+
+.skills-showcase {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(380px, 0.95fr);
+
+    align-items: center;
+    gap: clamp(35px, 5vw, 75px);
+}
+
+/* =========================================
    CARDS DE CATEGORIAS
 ========================================= */
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-}
-
-.skills-grid[hidden],
-.skills-wheel[hidden] {
-    display: none;
+    gap: 18px;
 }
 
 .skill-category-card {
+    min-width: 0;
     min-height: 175px;
-    padding: 28px;
+
+    padding: 25px;
 
     display: flex;
     flex-direction: column;
@@ -937,6 +951,7 @@ html[data-theme="light"] .theme-toggle-track {
     background: var(--glass-strong);
     border-color: var(--color-primary);
     transform: translateY(-4px);
+    box-shadow: 0 10px 28px var(--ambient-color);
 }
 
 /* Títulos */
@@ -946,23 +961,25 @@ html[data-theme="light"] .theme-toggle-track {
 
     color: var(--text-primary);
     font-family: 'Manrope', sans-serif;
-    font-size: 1.08rem;
+    font-size: 1.05rem;
     font-weight: 700;
 }
 
-/* Logos */
+/* Área dos logos */
 
 .skill-logos {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 13px;
 }
 
+/* Ícones individuais */
+
 .skill-logo {
-    width: 62px;
-    height: 62px;
-    flex: 0 0 62px;
+    width: 57px;
+    height: 57px;
+    flex: 0 0 57px;
 
     display: flex;
     align-items: center;
@@ -970,6 +987,7 @@ html[data-theme="light"] .theme-toggle-track {
 
     color: var(--text-primary);
     background: var(--glass-bg);
+
     border: 1px solid var(--glass-border);
     border-radius: 11px;
 
@@ -981,95 +999,44 @@ html[data-theme="light"] .theme-toggle-track {
 }
 
 .skill-logo i {
-    font-size: 2.65rem;
+    font-size: 2.4rem;
     line-height: 1;
 }
+
+/* GitHub acompanha a cor do tema */
 
 .skill-logo-github i {
     color: var(--text-primary);
 }
 
+/* Hover dos logos */
+
 .skill-logo:hover {
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(-5px) scale(1.06);
+
     background: var(--glass-strong);
     border-color: var(--color-primary);
-    box-shadow: 0 6px 18px var(--ambient-color);
+
+    box-shadow: 0 5px 18px var(--ambient-color);
 }
 
 /* =========================================
-   BOTÃO PARA TROCAR O LAYOUT
-========================================= */
-
-.skills-view-control {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.skills-view-toggle {
-    min-height: 46px;
-    padding: 0 21px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 11px;
-
-    color: var(--text-primary);
-    background: var(--glass-bg);
-
-    border: 1px solid var(--glass-border);
-    border-radius: 10px;
-
-    font-family: var(--font-primary);
-    font-size: 0.82rem;
-    font-weight: 600;
-
-    cursor: pointer;
-
-    box-shadow: var(--glass-shadow);
-
-    transition:
-        background var(--transition),
-        border-color var(--transition),
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-.skills-view-toggle:hover {
-    background: var(--glass-strong);
-    border-color: var(--color-primary);
-    transform: translateY(-3px);
-    box-shadow: 0 7px 20px var(--ambient-color);
-}
-
-.skills-toggle-icon {
-    color: var(--color-primary);
-    font-size: 1.35rem;
-    line-height: 1;
-    transition: transform 0.4s ease;
-}
-
-.skills-view-toggle:hover .skills-toggle-icon {
-    transform: rotate(90deg);
-}
-
-/* =========================================
-   ROLETA DE TECNOLOGIAS
+   ÓRBITA DE TECNOLOGIAS
 ========================================= */
 
 .skills-wheel {
     width: 100%;
+    min-width: 0;
     min-height: 480px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin-top: 8px;
-
-    overflow: hidden;
+    overflow: visible;
 }
+
+/* Área circular */
 
 .skills-wheel-stage {
     position: relative;
@@ -1079,43 +1046,80 @@ html[data-theme="light"] .theme-toggle-track {
 
     display: grid;
     place-items: center;
+
+    isolation: isolate;
 }
 
-/* Anel central */
+/* Iluminação atrás da órbita */
+
+.skills-wheel-stage::before {
+    content: "";
+
+    position: absolute;
+    inset: 12%;
+    z-index: -1;
+
+    background: radial-gradient(
+        circle,
+        var(--ambient-color),
+        transparent 68%
+    );
+
+    filter: blur(20px);
+    border-radius: 50%;
+}
+
+/* Anel circular */
 
 .skills-wheel-ring {
     position: absolute;
-    inset: 15%;
+    inset: 11%;
 
-    border: 1px dashed var(--glass-border);
+    border: 1px solid var(--glass-border);
     border-radius: 50%;
 
     box-shadow:
-        0 0 35px var(--ambient-color),
-        inset 0 0 35px var(--ambient-color);
+        0 0 25px var(--ambient-color),
+        inset 0 0 25px var(--ambient-color);
 }
 
-/* Centro da roleta */
+/* Anel secundário */
+
+.skills-wheel-ring::before {
+    content: "";
+
+    position: absolute;
+    inset: 12%;
+
+    border: 1px dashed var(--glass-border);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+/* =========================================
+   CENTRO DA ÓRBITA
+========================================= */
 
 .skills-wheel-center {
     position: relative;
     z-index: 2;
 
-    width: 125px;
-    height: 125px;
+    width: 126px;
+    height: 126px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3px;
+    gap: 4px;
 
     background: var(--bg-secondary);
+
     border: 1px solid var(--glass-border);
     border-radius: 50%;
 
     box-shadow:
-        0 0 0 9px var(--glass-bg),
+        0 0 0 8px var(--glass-bg),
         0 0 35px var(--ambient-color);
 
     text-align: center;
@@ -1123,61 +1127,64 @@ html[data-theme="light"] .theme-toggle-track {
 
 .skills-wheel-center span {
     color: var(--text-muted);
-    font-size: 0.61rem;
+    font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 2px;
 }
 
 .skills-wheel-center strong {
     color: var(--color-primary);
+
     font-family: 'Manrope', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 800;
     letter-spacing: 1px;
 }
 
 .skills-wheel-center small {
     color: var(--text-muted);
-    font-size: 0.52rem;
-    letter-spacing: 1.4px;
+    font-size: 0.48rem;
+    letter-spacing: 1.2px;
 }
 
-/* Órbita */
+/* =========================================
+   TECNOLOGIAS ORBITANDO
+========================================= */
 
 .skills-wheel-orbit {
     position: absolute;
     inset: 0;
-
     z-index: 3;
 
-    animation: skills-wheel-spin 36s linear infinite;
+    animation: skills-orbit-spin 36s linear infinite;
 }
 
-/* Cada tecnologia */
+/* Posição de cada tecnologia */
 
 .skill-orbit-item {
     position: absolute;
     top: 50%;
     left: 50%;
 
-    width: 64px;
-    height: 64px;
+    width: 62px;
+    height: 62px;
 
-    margin: -32px;
+    margin: -31px;
 
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     transform:
         rotate(var(--angle))
-        translateY(-195px);
+        translateY(-184px);
 }
 
-/* Aparência circular dos logos */
+/* Fundo de cada logo */
 
 .skill-orbit-icon {
-    width: 62px;
-    height: 62px;
+    width: 60px;
+    height: 60px;
 
     display: flex;
     align-items: center;
@@ -1195,7 +1202,7 @@ html[data-theme="light"] .theme-toggle-track {
 
     transform: rotate(var(--counter-angle));
 
-    animation: skills-wheel-counter 36s linear infinite;
+    animation: skills-orbit-counter 36s linear infinite;
 
     transition:
         background var(--transition),
@@ -1203,26 +1210,34 @@ html[data-theme="light"] .theme-toggle-track {
         box-shadow var(--transition);
 }
 
+/* Tamanho dos logos */
+
 .skill-orbit-icon i {
-    font-size: 2.45rem;
+    font-size: 2.4rem;
     line-height: 1;
 }
 
-.skill-orbit-github .skill-orbit-icon i {
+/* GitHub acompanha o tema */
+
+.skill-orbit-item[title="GitHub"] .skill-orbit-icon i {
     color: var(--text-primary);
 }
 
-/* Efeito nos logos da roleta */
+/* Efeito no hover */
 
 .skill-orbit-item:hover .skill-orbit-icon {
     background: var(--glass-strong);
     border-color: var(--color-primary);
-    box-shadow: 0 0 25px var(--ambient-color);
+
+    box-shadow:
+        0 0 25px var(--ambient-color);
 }
 
-/* Animações */
+/* =========================================
+   ANIMAÇÕES DA ÓRBITA
+========================================= */
 
-@keyframes skills-wheel-spin {
+@keyframes skills-orbit-spin {
     from {
         transform: rotate(0deg);
     }
@@ -1232,7 +1247,7 @@ html[data-theme="light"] .theme-toggle-track {
     }
 }
 
-@keyframes skills-wheel-counter {
+@keyframes skills-orbit-counter {
     from {
         transform: rotate(var(--counter-angle));
     }
@@ -1245,7 +1260,6 @@ html[data-theme="light"] .theme-toggle-track {
 /* Pausa ao passar o mouse */
 
 .skills-wheel-stage:hover .skills-wheel-orbit,
-.skills-wheel-stage:focus-within .skills-wheel-orbit,
 .skills-wheel-stage:hover .skill-orbit-icon {
     animation-play-state: paused;
 }
@@ -1254,57 +1268,41 @@ html[data-theme="light"] .theme-toggle-track {
    RESPONSIVIDADE
 ========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
 
-    .skill-category-card {
-        padding: 24px;
+    .skills-showcase {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 25px;
     }
 
-    .skill-logos {
-        gap: 12px;
-    }
-
-    .skill-logo {
-        width: 58px;
-        height: 58px;
-        flex-basis: 58px;
-    }
-
-    .skill-logo i {
-        font-size: 2.4rem;
+    .skills-grid {
+        width: 100%;
     }
 
     .skills-wheel {
-        min-height: 420px;
+        min-height: 440px;
     }
 
     .skills-wheel-stage {
-        width: min(100%, 420px);
-    }
-
-    .skill-orbit-item {
-        transform:
-            rotate(var(--angle))
-            translateY(-175px);
-    }
-
-    .skill-orbit-icon {
-        width: 57px;
-        height: 57px;
+        width: min(100%, 440px);
     }
 }
 
 @media (max-width: 600px) {
 
+    .skills .section-heading {
+        margin-bottom: 30px;
+    }
+
     .skills-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 14px;
     }
 
     .skill-category-card {
-        min-height: 145px;
-        padding: 22px;
-        gap: 20px;
+        min-height: 140px;
+        padding: 21px;
+        gap: 18px;
     }
 
     .skill-category-card h3 {
@@ -1312,67 +1310,53 @@ html[data-theme="light"] .theme-toggle-track {
     }
 
     .skill-logo {
-        width: 55px;
-        height: 55px;
-        flex-basis: 55px;
+        width: 53px;
+        height: 53px;
+        flex-basis: 53px;
     }
 
     .skill-logo i {
-        font-size: 2.25rem;
-    }
-
-    .skills-view-control {
-        margin-top: 23px;
-    }
-
-    .skills-view-toggle {
-        width: 100%;
-        max-width: 290px;
-        font-size: 0.75rem;
+        font-size: 2.2rem;
     }
 
     .skills-wheel {
-        min-height: 340px;
+        min-height: 355px;
     }
 
     .skills-wheel-stage {
         width: min(100%, 350px);
     }
 
-    .skills-wheel-ring {
-        inset: 16%;
-    }
-
     .skills-wheel-center {
-        width: 100px;
-        height: 100px;
+        width: 104px;
+        height: 104px;
     }
 
     .skills-wheel-center strong {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
     .skills-wheel-center small {
-        font-size: 0.45rem;
+        font-size: 0.43rem;
     }
 
     .skill-orbit-item {
-        width: 48px;
-        height: 48px;
-        margin: -24px;
+        width: 50px;
+        height: 50px;
+        margin: -25px;
 
         transform:
             rotate(var(--angle))
-            translateY(-140px);
+            translateY(-137px);
     }
 
     .skill-orbit-icon {
-        width: 47px;
-        height: 47px;
+        width: 49px;
+        height: 49px;
     }
 
     .skill-orbit-icon i {
-        font-size: 1.9rem;
+        font-size: 1.95rem;
     }
 }
 
@@ -1387,12 +1371,12 @@ html[data-theme="light"] .theme-toggle-track {
 
     .skill-category-card,
     .skill-logo,
-    .skills-view-toggle,
-    .skills-toggle-icon {
+    .skill-orbit-icon {
         transition: none;
     }
 
 }
+
 
 
 
