@@ -120,14 +120,15 @@ window.PIRRAS_TRANSLATIONS = {
 
         /* Projects */
         "projects.eyebrow": "PROJETOS",
-        "projects.title": "Projetos e experiências práticas.",
-        "projects.description": "Alguns dos projetos que desenvolvi durante minha trajetória de aprendizado.",
+        "projects.title": "Projetos e Experiências Práticas",
+        "projects.description": "Meus melhores projetos.",
         "projects.academic": "Projeto acadêmico",
-        "projects.lionpaw_description": "Projeto de um pet shop fictício, desenvolvido durante a faculdade para praticar a estruturação e estilização de páginas web.",
-        "projects.repository": "Ver repositório ↗",
         "projects.personal": "Projeto pessoal",
-        "projects.portfolio_description": "Desenvolvimento do meu portfólio pessoal, com o objetivo de apresentar meus conhecimentos, projetos e trajetória na tecnologia.",
+        "projects.cadastro_description": "Aplicação desenvolvida em Python para cadastrar matérias, calcular médias, verificar frequência e gerar um relatório final do semestre.",
+        "projects.pirrasdev_description": "Portfólio pessoal desenvolvido para apresentar minha trajetória na tecnologia, meus conhecimentos, projetos e objetivos profissionais.",
+        "projects.repository": "Ver repositório ↗",
         "projects.all": "Ver todos os projetos no GitHub ↗",
+
 
         /* Contact */
         "contact.eyebrow": "CONTATO",
@@ -256,14 +257,15 @@ window.PIRRAS_TRANSLATIONS = {
 
         /* Projects */
         "projects.eyebrow": "PROJECTS",
-        "projects.title": "Projects and practical experience.",
-        "projects.description": "Some of the projects I have developed throughout my learning journey.",
+        "projects.title": "Featured Projects and Practical Experiences",
+        "projects.description": "My best projects.",
         "projects.academic": "Academic project",
-        "projects.lionpaw_description": "A fictional pet shop website developed during college to practice structuring and styling web pages.",
-        "projects.repository": "View repository ↗",
         "projects.personal": "Personal project",
-        "projects.portfolio_description": "Development of my personal portfolio to showcase my knowledge, projects, and journey in technology.",
+        "projects.cadastro_description": "A Python application for registering subjects, calculating grades, checking attendance and generating a final semester report.",
+        "projects.pirrasdev_description": "Personal portfolio created to showcase my journey in technology, skills, projects and professional goals.",
+        "projects.repository": "View repository ↗",
         "projects.all": "View all projects on GitHub ↗",
+
 
         /* Contact */
         "contact.eyebrow": "CONTACT",

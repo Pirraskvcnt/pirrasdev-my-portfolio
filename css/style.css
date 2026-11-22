@@ -16,7 +16,7 @@
     /* Cores principais */
     --color-primary: #A982F5;
     --color-primary-hover: #C3A6FF;
-    --color-green: #A5D69A;
+    --color-green: #A982F5;
 
     /* Textos */
     --text-primary: #F0ECF7;
@@ -1609,6 +1609,51 @@ html[data-theme="light"] .theme-toggle-track {
     margin-top: 45px;
 
 }
+
+
+/* =========================================
+   PROJECTS - ÍCONES DAS TECNOLOGIAS
+========================================= */
+
+.project-technologies {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-technologies li {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 11px;
+
+    color: var(--text-secondary);
+    background: var(--glass-bg);
+
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+
+    font-size: 0.8rem;
+    font-weight: 500;
+
+    transition:
+        background var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+.project-technologies li i {
+    font-size: 1.15rem;
+}
+
+.project-technologies li:hover {
+    background: var(--glass-strong);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
 
 
 /* =========================================
