@@ -277,107 +277,256 @@
              ABOUT - SOBRE MIM
         ================================== -->
 
-        <section
-            class="about section"
-            id="sobre"
-            aria-labelledby="about-title">
+        
+        <section class="about-section" id="sobre">
 
-            <div class="section-heading">
+            <div class="about-container">
 
-                <p class="section-eyebrow" data-i18n="about.eyebrow">
-                    01 / SOBRE MIM
-                </p>
+                <!-- Título da seção -->
+                <header class="about-heading">
+                    <h2>Sobre mim</h2>
+                </header>
 
-                <h2 id="about-title" data-i18n="about.title">
-                    Conheça um pouco da minha trajetória.
-                </h2>
+                <div class="about-content">
 
-            </div>
+                    <!-- Texto à esquerda -->
+                    <div class="about-description">
 
+                        <p>
+                            Atualmente, curso Ciência da Computação na UDF e estou
+                            construindo minha carreira como Desenvolvedor Backend
+                            com Java. Sempre fui muito ligado em tecnologia e busco
+                            evoluir todos os dias, fortalecendo minha base em
+                            fundamentos enquanto coloco a mão na massa em novos
+                            projetos.
+                        </p>
 
-            <div class="about-content">
-
-                <div class="about-description">
-
-                    <p data-i18n="about.paragraph1">
-
-                        Sou estudante de Ciência da Computação
-                        na UDF e tenho interesse pelo universo
-                        da tecnologia e do desenvolvimento
-                        de software.
-
-                    </p>
-
-                    <p data-i18n="about.paragraph2">
-
-                        Atualmente, estou construindo minha base
-                        em programação e aprofundando meus
-                        conhecimentos em desenvolvimento backend,
-                        com foco em Java, lógica de programação
-                        e bancos de dados.
-
-                    </p>
-
-                    <p data-i18n="about.paragraph3">
-
-                        Acredito que compreender como as coisas
-                        funcionam é tão importante quanto saber
-                        utilizá-las. Por isso, busco aprender
-                        através dos estudos, da prática e do
-                        desenvolvimento de projetos.
-
-                    </p>
-
-                </div>
-
-
-                <!-- Informações pessoais e acadêmicas -->
-                <div class="about-information">
-
-                    <div class="information-item">
-
-                        <h3 data-i18n="about.education_label">
-                            Formação
-                        </h3>
-
-                        <p data-i18n="about.education">
-                            Ciência da Computação
+                        <p>
+                            No dia a dia, prezo muito pela organização e me dedico
+                            ao máximo para fazer um trabalho bem-feito. Mas nem só
+                            de código eu vivo: nas horas vagas, gosto de treinar,
+                            jogar videogame, acompanhar a NBA e bater uma bola no
+                            basquete, além de estar sempre por perto dos meus
+                            amigos e da minha família.
                         </p>
 
                     </div>
 
-                    <div class="information-item">
+                    <!-- Informações clicáveis à direita -->
+                    <div class="about-information">
 
-                        <h3 data-i18n="about.institution_label">
-                            Instituição
-                        </h3>
+                        <!-- FORMAÇÃO -->
+                        <article class="about-info-card">
 
-                        <p>UDF</p>
+                            <button
+                                type="button"
+                                class="about-card-trigger"
+                                aria-expanded="false"
+                                aria-controls="about-formation"
+                            >
+                                <span class="about-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m2 10 10-5 10 5-10 5-10-5Z"/>
+                                        <path d="M6 12v5c3.5 3 8.5 3 12 0v-5"/>
+                                        <path d="M22 10v6"/>
+                                    </svg>
+                                </span>
 
-                    </div>
+                                <span class="about-card-text">
+                                    <strong>Formação</strong>
+                                    <small>Ciência da Computação · UDF</small>
+                                </span>
 
-                    <div class="information-item">
+                                <span class="about-card-indicator">+</span>
+                            </button>
 
-                        <h3 data-i18n="about.focus_label">
-                            Foco de estudos
-                        </h3>
+                            <div class="about-card-details"
+                                id="about-formation" hidden>
 
-                        <p data-i18n="about.focus">
-                            Desenvolvimento Backend e Java
-                        </p>
+                                <p>
+                                    Atualmente sou estudante de Ciência da
+                                    Computação na UDF, construindo minha base
+                                    acadêmica e desenvolvendo conhecimentos
+                                    fundamentais para a área de tecnologia.
+                                </p>
 
-                    </div>
+                                <span class="about-detail-label">
+                                    Ensino superior
+                                </span>
 
-                    <div class="information-item">
+                            </div>
 
-                        <h3 data-i18n="about.interests_label">
-                            Interesses
-                        </h3>
+                        </article>
 
-                        <p data-i18n="about.interests">
-                            Desenvolvimento de software, tecnologia,
-                            programação e resolução de problemas.
-                        </p>
+                        <!-- APRENDIZADO -->
+                        <article class="about-info-card">
+
+                            <button
+                                type="button"
+                                class="about-card-trigger"
+                                aria-expanded="false"
+                                aria-controls="about-learning"
+                            >
+                                <span class="about-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>
+                                        <path d="M8 7h8M8 11h6"/>
+                                    </svg>
+                                </span>
+
+                                <span class="about-card-text">
+                                    <strong>Aprendizado</strong>
+                                    <small>Estudos, cursos e tecnologias</small>
+                                </span>
+
+                                <span class="about-card-indicator">+</span>
+                            </button>
+
+                            <div class="about-card-details"
+                                id="about-learning" hidden>
+
+                                <p>
+                                    Estou sempre buscando novos conhecimentos por
+                                    meio da faculdade, cursos complementares e
+                                    projetos práticos.
+                                </p>
+
+                                <span class="about-detail-label">
+                                    Atualmente estudando
+                                </span>
+
+                                <div class="about-detail-tags">
+                                    <span>Java</span>
+                                    <span>Lógica e algoritmos</span>
+                                    <span>Estruturas de dados</span>
+                                    <span>MySQL</span>
+                                    <span>Git e GitHub</span>
+                                    <span>HTML, CSS e JavaScript</span>
+                                </div>
+
+                                <p class="about-detail-extra">
+                                    Também mantenho estudos complementares em
+                                    Python e inglês.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                        <!-- CARREIRA E IDIOMAS -->
+                        <article class="about-info-card">
+
+                            <button
+                                type="button"
+                                class="about-card-trigger"
+                                aria-expanded="false"
+                                aria-controls="about-career"
+                            >
+                                <span class="about-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="3" y="7" width="18" height="14" rx="2"/>
+                                        <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                                        <path d="M3 12h18"/>
+                                        <path d="M10 12v2h4v-2"/>
+                                    </svg>
+                                </span>
+
+                                <span class="about-card-text">
+                                    <strong>Carreira & idiomas</strong>
+                                    <small>Objetivos profissionais e inglês</small>
+                                </span>
+
+                                <span class="about-card-indicator">+</span>
+                            </button>
+
+                            <div class="about-card-details"
+                                id="about-career" hidden>
+
+                                <p>
+                                    Meu objetivo é construir uma carreira em
+                                    Desenvolvimento Backend, aprofundando meus
+                                    conhecimentos em Java e desenvolvendo soluções
+                                    cada vez mais completas.
+                                </p>
+
+                                <span class="about-detail-label">
+                                    Idiomas
+                                </span>
+
+                                <div class="about-language-item">
+                                    <span>Português</span>
+                                    <span class="about-language-status">
+                                        Nativo
+                                    </span>
+                                </div>
+
+                                <div class="about-language-item">
+                                    <span>Inglês</span>
+                                    <span class="about-language-status">
+                                        Em aprendizado
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                        <!-- ALÉM DO CÓDIGO -->
+                        <article class="about-info-card">
+
+                            <button
+                                type="button"
+                                class="about-card-trigger"
+                                aria-expanded="false"
+                                aria-controls="about-personal"
+                            >
+                                <span class="about-card-icon">
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/>
+                                    </svg>
+                                </span>
+
+                                <span class="about-card-text">
+                                    <strong>Além do código</strong>
+                                    <small>Interesses e vida pessoal</small>
+                                </span>
+
+                                <span class="about-card-indicator">+</span>
+                            </button>
+
+                            <div class="about-card-details"
+                                id="about-personal" hidden>
+
+                                <p>
+                                    Gosto de manter uma rotina ativa e encontrar
+                                    equilíbrio entre estudos, lazer e vida pessoal.
+                                </p>
+
+                                <div class="about-detail-tags">
+                                    <span>Academia</span>
+                                    <span>Basquete</span>
+                                    <span>NBA</span>
+                                    <span>Videogames</span>
+                                    <span>Amigos</span>
+                                    <span>Família</span>
+                                </div>
+
+                            </div>
+
+                        </article>
 
                     </div>
 
@@ -386,6 +535,7 @@
             </div>
 
         </section>
+
 
 
         <!-- =================================

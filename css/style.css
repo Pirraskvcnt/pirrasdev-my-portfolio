@@ -516,91 +516,390 @@ html[data-theme="light"] .theme-toggle-track {
    8. ABOUT - SOBRE MIM
 ========================================= */
 
-.about-content {
 
-    display: grid;
+/* =========================================
+   ABOUT - SOBRE MIM
+========================================= */
 
-    grid-template-columns: 1.4fr 1fr;
+/* Seção com background próprio */
 
-    gap: 60px;
+.about-section {
+    width: 100%;
 
-    align-items: start;
+    padding: clamp(75px, 9vw, 120px)
+             clamp(24px, 6vw, 100px);
 
+    background:
+        radial-gradient(
+            ellipse at 5% 20%,
+            var(--ambient-color),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            var(--glass-strong),
+            var(--bg-secondary) 65%,
+            var(--glass-bg)
+        );
+
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
+/* Conteúdo centralizado */
+
+.about-container {
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+}
+
+/* Título sem numeração */
+
+.about-heading {
+    margin-bottom: 45px;
+}
+
+.about-heading h2 {
+    color: var(--text-primary);
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+}
+
+/* Organização em duas colunas */
+
+.about-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(350px, 0.95fr);
+    align-items: start;
+
+    gap: clamp(40px, 6vw, 100px);
+}
+
+/* Texto à esquerda */
 
 .about-description {
-
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 23px;
 
+    max-width: 720px;
 }
 
 .about-description p {
-
     color: var(--text-secondary);
 
-    font-size: 1rem;
-
-    line-height: 1.9;
-
+    font-family: 'Inter', sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.95;
 }
 
+/* =========================================
+   CARDS DE INFORMAÇÃO
+========================================= */
 
 .about-information {
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 16px;
-
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
 }
 
+/* Card individual */
 
-.information-item {
+.about-info-card {
+    overflow: hidden;
 
-    padding: 20px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 13px;
 
-    background-color: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
-    border: 1px solid var(--border-color);
-
-    border-radius: 10px;
+    box-shadow: var(--glass-shadow);
 
     transition:
-        border-color var(--transition),
-        transform var(--transition);
-
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
 }
 
-.information-item:hover {
-
+.about-info-card:hover {
     border-color: var(--color-primary);
-
-    transform: translateY(-3px);
-
+    background: var(--glass-strong);
+    transform: translateY(-2px);
 }
 
-.information-item h3 {
+.about-info-card.is-open {
+    border-color: var(--color-primary);
+    background: var(--glass-strong);
+}
 
-    margin-bottom: 8px;
+/* Botão que abre o card */
+
+.about-card-trigger {
+    width: 100%;
+    min-height: 82px;
+
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr) 30px;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 18px;
+
+    color: var(--text-primary);
+    background: transparent;
+    border: none;
+
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Ícone */
+
+.about-card-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     color: var(--color-primary);
-
-    font-size: 0.85rem;
-
+    background: var(--glass-strong);
+    border: 1px solid var(--glass-border);
+    border-radius: 11px;
 }
 
-.information-item p {
+.about-card-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Título e descrição do card */
+
+.about-card-text {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.about-card-text strong {
+    color: var(--text-primary);
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.about-card-text small {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+/* Indicador de expansão */
+
+.about-card-indicator {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-primary);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+.about-info-card.is-open .about-card-indicator {
+    transform: rotate(45deg);
+    background: var(--glass-strong);
+}
+
+/* =========================================
+   CONTEÚDO EXPANDIDO
+========================================= */
+
+.about-card-details {
+    padding: 0 20px 20px 79px;
+
+    animation: about-details-in 0.25s ease;
+}
+
+.about-card-details[hidden] {
+    display: none;
+}
+
+.about-card-details p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.about-detail-label {
+    display: block;
+    margin: 17px 0 10px;
+
+    color: var(--color-primary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+/* Tags de tecnologias e interesses */
+
+.about-detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.about-detail-tags span {
+    padding: 6px 10px;
 
     color: var(--text-secondary);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 7px;
+
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+/* Texto complementar */
+
+.about-card-details .about-detail-extra {
+    margin-top: 14px;
+    font-size: 0.8rem;
+}
+
+/* Idiomas */
+
+.about-language-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 10px 0;
+
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
 
     font-size: 0.82rem;
-
-    line-height: 1.6;
-
 }
+
+.about-language-item:last-child {
+    border-bottom: none;
+}
+
+.about-language-status {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Animação de abertura */
+
+@keyframes about-details-in {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Acessibilidade */
+
+.about-card-trigger:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: -3px;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 950px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .about-description {
+        max-width: 850px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-section {
+        padding: 70px 6%;
+    }
+
+    .about-heading {
+        margin-bottom: 30px;
+    }
+
+    .about-description {
+        gap: 17px;
+    }
+
+    .about-description p {
+        font-size: 0.9rem;
+        line-height: 1.85;
+    }
+
+    .about-content {
+        gap: 30px;
+    }
+
+    .about-card-trigger {
+        grid-template-columns: 40px minmax(0, 1fr) 28px;
+        gap: 11px;
+        padding: 13px;
+    }
+
+    .about-card-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .about-card-details {
+        padding: 0 14px 17px 64px;
+    }
+
+    .about-card-text strong {
+        font-size: 0.88rem;
+    }
+
+    .about-card-text small {
+        font-size: 0.7rem;
+    }
+}
+
 
 
 /* =========================================
