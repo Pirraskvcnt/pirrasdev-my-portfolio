@@ -104,8 +104,8 @@ window.PIRRAS_TRANSLATIONS = {
         "about.personal.family": "Família",
 
         /* Skills */
-        "skills.eyebrow": "CONHECIMENTOS",
-        "skills.title": "Skills",
+        "skills.eyebrow": "SKILLS",
+        "skills.title": "Tecnologias e Conhecimentos",
         "skills.backend": "Backend",
         "skills.frontend": "Frontend",
         "skills.database": "Banco de dados",
@@ -256,8 +256,8 @@ window.PIRRAS_TRANSLATIONS = {
         "about.personal.family": "Family",
 
         /* Skills */
-        "skills.eyebrow": "KNOWLEDGE",
-        "skills.title": "Skills",
+        "skills.eyebrow": "SKILLS",
+        "skills.title": "Technologies and knowledge",
         "skills.backend": "Backend",
         "skills.frontend": "Frontend",
         "skills.database": "Database",
