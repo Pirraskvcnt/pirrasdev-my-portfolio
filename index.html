@@ -1044,51 +1044,335 @@
     </section>
 
 
+        
         <!-- =================================
-             CONTACT - CONTATO
+            CONTACT - CONTATO
         ================================== -->
 
-        <section class="contact section"
-                 id="contato"
-                 aria-labelledby="contact-title">
+        <section class="contact-section" id="contato"
+                aria-labelledby="contact-title">
 
-            <div class="contact-content">
+            <div class="contact-container">
 
-                <p class="section-eyebrow" data-i18n="contact.eyebrow">
-                    CONTATO
-                </p>
+                <!-- Cabeçalho -->
+                <header class="contact-heading">
 
-                <h2 id="contact-title" data-i18n="contact.title">
-                    Vamos conversar?
-                </h2>
+                    <p class="section-eyebrow" data-i18n="contact.eyebrow">
+                        CONTATO
+                    </p>
 
-                <p data-i18n="contact.description">
-                    Estou aberto a conexões, trocas de conhecimento
-                    e oportunidades relacionadas à tecnologia.
-                    Entre em contato através das minhas redes.
-                </p>
+                    <h2 id="contact-title" data-i18n="contact.title">
+                        Vamos conversar?
+                    </h2>
 
-                <div class="contact-links">
+                    <p data-i18n="contact.description">
+                        Tem alguma dúvida, ideia ou oportunidade?
+                        Envie uma mensagem. Será um prazer conversar.
+                    </p>
 
-                    <a href="https://github.com/Pirraskvcnt"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       data-i18n="contact.github">
-                        GitHub ↗
-                    </a>
+                </header>
 
-                    <a href="https://www.linkedin.com/in/pierre-cavalcante-kvcnt/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       data-i18n="contact.linkedin">
-                        LinkedIn ↗
-                    </a>
+
+                <!-- Informações + formulário -->
+                <div class="contact-layout">
+
+                    <!-- =================================
+                        INFORMAÇÕES DE CONTATO
+                    ================================== -->
+
+                    <aside class="contact-information">
+
+                        <h3 data-i18n="contact.infoTitle">
+                            Informações de contato
+                        </h3>
+
+                        <p class="contact-information-description"
+                        data-i18n="contact.infoDescription">
+
+                            Você também pode entrar em contato diretamente
+                            pelos canais abaixo.
+
+                        </p>
+
+
+                        <div class="contact-info-list">
+
+                            <!-- E-mail -->
+                            <a href="mailto:SEU_EMAIL"
+                            class="contact-info-item">
+
+                                <span class="contact-info-icon" aria-hidden="true">
+
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+
+                                        <rect x="3" y="5" width="18" height="14" rx="2"/>
+                                        <path d="m3 7 9 6 9-6"/>
+
+                                    </svg>
+
+                                </span>
+
+                                <span class="contact-info-text">
+                                    <small data-i18n="contact.email">E-mail</small>
+                                    <strong>pierreflores002@gmail.com</strong>
+                                </span>
+
+                            </a>
+
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/pierre-cavalcante-kvcnt/"
+                            class="contact-info-item"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                                <span class="contact-info-icon" aria-hidden="true">
+
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+
+                                        <path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM8.05 18.9H5.1V9.4h2.95v9.5ZM6.58 8.1a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42ZM18.9 18.9h-2.94v-4.62c0-1.1-.02-2.51-1.53-2.51-1.53 0-1.77 1.2-1.77 2.43v4.7H9.72V9.4h2.82v1.3h.04c.39-.74 1.35-1.53 2.78-1.53 2.97 0 3.54 1.95 3.54 4.49v5.24Z"/>
+
+                                    </svg>
+
+                                </span>
+
+                                <span class="contact-info-text">
+                                    <small>LinkedIn</small>
+                                    <strong>Meu perfil profissional</strong>
+                                </span>
+
+                                <span class="contact-info-arrow" aria-hidden="true">↗</span>
+
+                            </a>
+
+
+                            <!-- Telefone -->
+                            <a href="tel:+5500000000000"
+                            class="contact-info-item">
+
+                                <span class="contact-info-icon" aria-hidden="true">
+
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                                        19.79 19.79 0 0 1-8.63-3.07
+                                        19.5 19.5 0 0 1-6-6
+                                        19.79 19.79 0 0 1-3.07-8.67
+                                        A2 2 0 0 1 4.11 2h3
+                                        a2 2 0 0 1 2 1.72
+                                        c.12.96.36 1.9.7 2.8
+                                        a2 2 0 0 1-.45 2.11L8.09 9.91
+                                        a16 16 0 0 0 6 6l1.27-1.27
+                                        a2 2 0 0 1 2.11-.45
+                                        c.9.34 1.84.58 2.8.7
+                                        A2 2 0 0 1 22 16.92Z"/>
+
+                                    </svg>
+
+                                </span>
+
+                                <span class="contact-info-text">
+                                    <small data-i18n="contact.phone">Telefone</small>
+                                    <strong>+55 (61) 99915-7867</strong>
+                                </span>
+
+                            </a>
+
+
+                            <!-- Localização -->
+                            <div class="contact-info-item">
+
+                                <span class="contact-info-icon" aria-hidden="true">
+
+                                    <svg viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" stroke-linejoin="round">
+
+                                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                                        <circle cx="12" cy="10" r="2.5"/>
+
+                                    </svg>
+
+                                </span>
+
+                                <span class="contact-info-text">
+                                    <small data-i18n="contact.location">Localização</small>
+                                    <strong>Valparaíso - GO, Brasil</strong>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </aside>
+
+
+                    <!-- =================================
+                        FORMULÁRIO
+                    ================================== -->
+
+                    <div class="contact-form-panel">
+
+                        <h3 data-i18n="contact.formTitle">
+                            Envie uma mensagem
+                        </h3>
+
+                        <p class="contact-form-description"
+                        data-i18n="contact.formDescription">
+
+                            Preencha os campos abaixo para entrar em contato comigo.
+
+                        </p>
+
+
+                        <!-- Mensagens de retorno do Formspree -->
+                        <div class="contact-form-success"
+                            data-fs-success
+                            aria-live="polite"
+                            data-i18n="contact.formSuccess">
+
+                            Mensagem enviada com sucesso! Obrigado pelo contato.
+
+                        </div>
+
+                        <div class="contact-form-error"
+                            data-fs-error
+                            aria-live="polite"
+                            data-i18n="contact.formError">
+
+                            Não foi possível enviar sua mensagem. Tente novamente.
+
+                        </div>
+
+
+                        <form id="contact-form"
+                            class="contact-form"
+                            action="https://formspree.io/f/mjywpklj"
+                            method="POST">
+
+                            <input type="hidden"
+                                name="_subject"
+                                value="Nova mensagem pelo portfólio PirrasDev">
+
+
+                            <div class="contact-form-grid">
+
+                                <!-- Nome -->
+                                <div class="contact-field">
+
+                                    <label for="contact-name"
+                                        data-i18n="contact.formName">
+                                        Nome
+                                    </label>
+
+                                    <input type="text"
+                                        id="contact-name"
+                                        name="name"
+                                        autocomplete="name"
+                                        placeholder="Seu nome"
+                                        required
+                                        minlength="2"
+                                        data-fs-field>
+
+                                </div>
+
+
+                                <!-- E-mail -->
+                                <div class="contact-field">
+
+                                    <label for="contact-email"
+                                        data-i18n="contact.formEmail">
+                                        E-mail
+                                    </label>
+
+                                    <input type="email"
+                                        id="contact-email"
+                                        name="email"
+                                        autocomplete="email"
+                                        placeholder="seu@email.com"
+                                        required
+                                        data-fs-field>
+
+                                </div>
+
+
+                                <!-- Assunto -->
+                                <div class="contact-field contact-field-full">
+
+                                    <label for="contact-subject"
+                                        data-i18n="contact.formSubject">
+                                        Assunto
+                                    </label>
+
+                                    <input type="text"
+                                        id="contact-subject"
+                                        name="subject"
+                                        placeholder="Sobre o que deseja conversar?"
+                                        required
+                                        data-fs-field>
+
+                                </div>
+
+
+                                <!-- Mensagem -->
+                                <div class="contact-field contact-field-full">
+
+                                    <label for="contact-message"
+                                        data-i18n="contact.formMessage">
+                                        Mensagem
+                                    </label>
+
+                                    <textarea id="contact-message"
+                                            name="message"
+                                            rows="6"
+                                            placeholder="Escreva sua mensagem..."
+                                            required
+                                            minlength="10"
+                                            data-fs-field></textarea>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Proteção contra spam -->
+                            <div class="contact-honeypot" aria-hidden="true">
+                                <label for="contact-website">Não preencha este campo</label>
+                                <input type="text"
+                                    id="contact-website"
+                                    name="_gotcha"
+                                    tabindex="-1"
+                                    autocomplete="off">
+                            </div>
+
+
+                            <!-- Enviar -->
+                            <button type="submit"
+                                    class="contact-submit"
+                                    data-fs-submit-btn>
+
+                                <span data-i18n="contact.formSubmit">
+                                    Enviar mensagem
+                                </span>
+
+                                <span aria-hidden="true">↗</span>
+
+                            </button>
+
+                        </form>
+
+                    </div>
 
                 </div>
+
             </div>
+
         </section>
 
-    </main>
 
     <!-- =================================
          FOOTER
@@ -1120,6 +1404,25 @@
 
         </div>
     </footer>
+
+    <!-- =================================
+        FORMSPREE - ENVIO DE MENSAGENS
+    ================================== -->
+
+    <script>
+        window.formspree =
+            window.formspree ||
+            function () {
+                (formspree.q = formspree.q || []).push(arguments);
+            };
+
+        formspree('initForm', {
+            formElement: '#contact-form',
+            formId: 'mjywpklj'
+        });
+    </script>
+
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
