@@ -92,5 +92,5 @@ Estudante de Ciência da Computação, interessado em desenvolvimento de softwar
 ---
 
 <p align="center">
-  Desenvolvido por <strong>PirrasDev</strong> 💜
+  Desenvolvido por <strong>Pierre Cavalcante</strong> 💜
 </p>
